@@ -3557,10 +3557,10 @@ tailwindcss-animate@^1.0.7:
   resolved "https://registry.npmjs.org/tailwindcss-animate/-/tailwindcss-animate-1.0.7.tgz"
   integrity sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==
 
-tailwindcss-animated@^1.0.1:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/tailwindcss-animated/-/tailwindcss-animated-1.1.1.tgz"
-  integrity sha512-62FQuaFh3L++vUzpfQs/0tN3xhBXnfp1jwWlDAl0AnOi/PaTP39dNwTk7w1tscrAPNA3zTdeCG/BZZMT6cSUsA==
+tailwindcss-animated@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-animated/-/tailwindcss-animated-2.0.0.tgz#c0b04e9f7fd37b67ecdf046a350673570da41348"
+  integrity sha512-anNNGpxNgjydD8p1lcJjxxH+XbjW6KR8Xs29owTrbcf3tOJ6IRblpyFob43HBkfxFJJTAfFQqugoEG2b1EsR0A==
 
 tailwindcss@^3.3.0:
   version "3.4.4"
