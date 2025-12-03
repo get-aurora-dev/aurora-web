@@ -32,7 +32,7 @@
     "react-dom": "^19.0.0",
     "react-scroll-motion": "^0.3.5",
     "swr": "^2.3.3",
-    "tailwind-merge": "^2.2.2",
+    "tailwind-merge": "^3.0.0",
     "tailwindcss-animate": "^1.0.7",
     "use-mobile-detect-hook": "^1.0.5"
   },
