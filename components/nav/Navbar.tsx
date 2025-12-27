@@ -148,25 +148,23 @@ const Navbar = ({
         </div>
         <Transition
           show={navbarOpen}
-          className={"w-full"}
           enter="transition ease-out duration-100 transform"
           enterFrom="opacity-0 scale-95"
           enterTo="opacity-100 scale-100"
           leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
+          className="w-full"
+          as="div"
         >
-          {(ref) => (
-            <div
-              ref={ref}
-              className={`mt-5 flex-grow items-center rounded-2xl lg:flex`}
-              id="example-navbar-warning"
-            >
-              <div className="flex w-full flex-col items-center justify-center gap-14 p-10 text-lg">
-                <NavbarItems introRef={introRef} newsRef={newsRef} closeNavbar={closeNavbar}/>
-              </div>
+          <div
+            className={`mt-5 flex-grow items-center rounded-2xl lg:flex`}
+            id="example-navbar-warning"
+          >
+            <div className="flex w-full flex-col items-center justify-center gap-14 p-10 text-lg">
+              <NavbarItems introRef={introRef} newsRef={newsRef} closeNavbar={closeNavbar}/>
             </div>
-          )}
+          </div>
         </Transition>
       </div>
     </nav>
