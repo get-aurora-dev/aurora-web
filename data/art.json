@@ -71,6 +71,7 @@
       "title": "Luna",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-2.png",
+      "thumbnail": "/art/wallpapers/wallpaper-2.jpg",
       "artist": "chandeleer"
     },
     {
@@ -78,6 +79,7 @@
       "title": "Voyage",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-3.png",
+      "thumbnail": "/art/wallpapers/wallpaper-3.jpg",
       "artist": "chandeleer"
     },
     {
@@ -85,6 +87,7 @@
       "title": "AuroraVerse",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-4.png",
+      "thumbnail": "/art/wallpapers/wallpaper-4.jpg",
       "artist": "chandeleer"
     },
     {
@@ -92,6 +95,7 @@
       "title": "Globetrotter",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-5.png",
+      "thumbnail": "/art/wallpapers/wallpaper-5.jpg",
       "artist": "chandeleer"
     },
     {
@@ -99,6 +103,7 @@
       "title": "FallBlues",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-6.png",
+      "thumbnail": "/art/wallpapers/wallpaper-6.jpg",
       "artist": "chandeleer"
     },
     {
@@ -106,6 +111,7 @@
       "title": "Holiday Blues",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-7.png",
+      "thumbnail": "/art/wallpapers/wallpaper-7.jpg",
       "artist": "chandeleer"
     }
   ]

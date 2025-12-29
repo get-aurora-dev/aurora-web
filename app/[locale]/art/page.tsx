@@ -29,6 +29,7 @@ type Artwork = {
   pronouns?: string;
   category: string;
   image: string;
+  thumbnail?: string;
   profilePicture?: string;
   artist: string;
 };
@@ -126,7 +127,7 @@ function CategoryCarousel({
                   className={`relative overflow-hidden ${isWallpaper ? "aspect-video" : "aspect-square"}`}
                 >
                   <img
-                    src={artwork.profilePicture || artwork.image}
+                    src={artwork.thumbnail || artwork.profilePicture || artwork.image}
                     alt={artwork.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
