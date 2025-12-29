@@ -165,10 +165,9 @@ export default function DownloadAurora({
                       {t("rebasing")}
                     </h4>
                     <p className="text-sm text-zinc-300">
-                      {t("image-name-will-be")}{" "}
-                      <code className="rounded bg-zinc-800 px-2 py-1 font-mono text-aurora-orangina">
-                        {imageName.replace("-stable", ":stable")}
-                      </code>
+                      {t("image-name-will-be", {
+                        name: imageName.replace("-stable", ":stable"),
+                      })}{" "}
                     </p>
                   </div>
                 </div>

@@ -20,7 +20,7 @@ export default function AboutAuroraNew({
 }) {
   return (
     <main className={"relative min-h-dvh bg-gray-950 p-10 text-white"}>
-      <StarsBackground starDensity={0.00003} static />
+      <StarsBackground starDensity={0.0005} static />
       <div ref={aboutRef} className={"relative z-10 flex flex-row gap-10"}>
         <div className="flex w-full flex-col items-center justify-center gap-44">
           <YourNewDesktop />

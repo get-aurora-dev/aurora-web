@@ -55,7 +55,7 @@
     "onboard": "Get onboard the starship to your new desktop operating system.",
     "gaze": " Let's gaze at the stars together, fellow traveller.",
     "learn-more": "Learn more",
-    "tagline": "is here. Enjoy a privacy-respecting, smooth and stable experience on your PC. Imagine that.",
+    "tagline": "is here. Enjoy a privacy-respecting, fast and stable experience on your PC.",
     "go-to-docs": "Go to the docs",
     "loop-1": "Develop your next app.",
     "loop-2": "Launch a space rocket.",
@@ -172,8 +172,8 @@
     "homebrew-highlight": "Dev tooling has never been more convenient."
   },
   "Your-New-Desktop": {
-    "title": "Welcome, it's your new desktop.",
-    "subtitle": "Power on and feel right at home when using your computer, from the first moment on. Develop faster than ever before. Explore the galaxy. Write your next novel.",
+    "title": "This is your new desktop.",
+    "subtitle": "Power on and feel right at home when using your computer, from the first moment on. No distractions or ads. Develop faster than ever before. Explore the galaxy. Write your next novel.",
     "kde-title": "Built with KDE Plasma.",
     "kde-text": "Aurora is built around the customizable and adaptable KDE Plasma Desktop Environment, carefully customized by us to provide the best experience out of the box.",
     "kde-highlight": "Feel right at home from day one.",
