@@ -22,7 +22,7 @@ export default function LanguageSelector() {
   const pathname = usePathname();
 
   const handleLocaleChange = (newLocale: string) => {
-    router.replace(pathname, { locale: newLocale as "en" | "de" });
+    router.replace(pathname, { locale: newLocale as (typeof locales)[number]['code'] });
   };
 
   return (

@@ -129,7 +129,7 @@ const SharedNavbar = ({ variant = "page", onScrollTo }: SharedNavbarProps) => {
                 if (isHomePage && variant === "home") {
                   handleNavClick("download");
                 } else {
-                  window.location.href = "/#download";
+                  router.push("/#download");
                 }
               }}
             />

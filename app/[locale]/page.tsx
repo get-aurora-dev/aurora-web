@@ -7,9 +7,9 @@ import React, { useRef, useCallback } from "react";
 import AboutAuroraNew from "@/components/sections/about/about-aurora-new";
 
 export default function Home() {
-  const aboutRef = React.createRef<HTMLDivElement>();
+  const aboutRef = useRef<HTMLDivElement>(null);
   const introRef = useRef<HTMLDivElement>(null);
-  const downloadRef = React.createRef<HTMLDivElement>();
+  const downloadRef = useRef<HTMLDivElement>(null);
   const newsRef = useRef<HTMLDivElement>(null);
 
   const handleScrollTo = useCallback((section: string) => {
@@ -22,7 +22,7 @@ export default function Home() {
       behavior: "smooth",
       block: "start",
     });
-  }, [downloadRef]);
+  }, [introRef, downloadRef, newsRef]);
 
   return (
     <div>
