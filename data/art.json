@@ -31,12 +31,12 @@
       "artist": "chandeleer"
     },
     {
-      "id": "char-philip",
-      "title": "Philip",
+      "id": "char-phlip",
+      "title": "Phlip",
       "pronouns": "He/Him",
       "category": "characters",
-      "image": "/art/characters/philip.png",
-      "profilePicture": "/art/profile_pictures/philip.png",
+      "image": "/art/characters/phlip.png",
+      "profilePicture": "/art/profile_pictures/phlip.png",
       "artist": "chandeleer"
     },
     {
