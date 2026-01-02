@@ -16,7 +16,7 @@ const locales = [
   { code: "en", label: "English" },
   { code: "de", label: "Deutsch" },
   { code: "fr", label: "Français"},
-  { code: "pt-PT", label: "{Português}"},
+  { code: "pt-PT", label: "Português"},
 ] as const;
 
 type LocaleCode = (typeof locales)[number]["code"];
