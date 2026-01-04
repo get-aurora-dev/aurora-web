@@ -27,6 +27,7 @@ export const languages: Language[] = [
   { code: 'de', name: 'German', nativeName: 'Deutsch' },
   { code: 'fr', name: 'French', nativeName: 'Français' },
   { code: 'pt-PT', name: 'Portuguese (Portugal)', nativeName: 'Português (Portugal)' },
+  { code: 'ru', name: 'Russian', nativeName: 'Русский' },
 ];
 
 /** Array of locale codes - derived from languages config */

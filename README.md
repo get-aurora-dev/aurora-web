@@ -55,6 +55,7 @@ aurora-web/
 │   ├── en.json         # English (reference)
 │   ├── de.json         # German
 │   ├── fr.json         # French
-│   └── pt-PT.json      # Portuguese (Portugal)
+│   ├── pt-PT.json      # Portuguese (Portugal)
+│   └── ru.json         # Russian
 └── middleware.ts       # Locale detection middleware
 ```
