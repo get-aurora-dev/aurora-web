@@ -192,7 +192,7 @@
     "app-store": "A unified app store.",
     "app-store-text": "Utilizing the power of the Flathub App Store, we have a unified and one-stop shop for app developers and app users alike. For the first time, there is a unified app store for the Linux platform where developers can publish their apps easily and earn money to support their OSS work.",
     "app-store-highlight": "It's the year of the Linux App Store.",
-    "checkout-flathub": "Checkout Flathub",
+    "checkout-flathub": "Check out Flathub",
     "extendable": "Easily auditable and extendable.",
     "extendable-text": "Aurora is nothing more than a collection of bash scripts, containerfiles and custom programs stitched together. This makes it easy to audit, contribute and help out. By building a easy entry-point for developers, we hope to encourage contributions from new users. Go on this journey with us.",
     "extendable-highlight": "The power of Docker is here for the desktop. Wowza."
