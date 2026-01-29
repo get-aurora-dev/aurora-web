@@ -41,7 +41,7 @@
     "run-after-install": "après l'installation.",
     "learn-more": "En savoir plus",
     "rebasing": "Rebasage",
-    "image-name-will-be": "Le nom de votre image sera",
+    "image-name-will-be": "Le nom de votre image sera {name}.",
     "slow-download": "Téléchargement lent ?",
     "check-friends": "Découvrez nos amis chez",
     "select-hardware-config": "Sélectionner la Configuration Matérielle",
