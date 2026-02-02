@@ -121,6 +121,14 @@
       "image": "/art/wallpapers/wallpaper-8.png",
       "thumbnail": "/art/wallpapers/wallpaper-8.jpg",
       "artist": "chandeleer"
+    },
+     {
+      "id": "wallpaper-9",
+      "title": "Shangyuan",
+      "category": "wallpapers",
+      "image": "/art/wallpapers/wallpaper-9.png",
+      "thumbnail": "/art/wallpapers/wallpaper-9.jpg",
+      "artist": "chandeleer"
     }
   ]
 }
