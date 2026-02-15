@@ -14,6 +14,27 @@ const LOGO_DEFAULT = "/aurora-text-logo.svg";
 const LOGO_PRIDE = "/pride-aurora.svg";
 const LOGO_TRANS = "/aurora-trans.svg";
 const LOGO_ROTATION = [LOGO_DEFAULT, LOGO_PRIDE, LOGO_TRANS] as const;
+type HeroLogo = (typeof LOGO_ROTATION)[number];
+
+type HeroButtonTheme = {
+	learnGradient: string;
+	docsGradient: string;
+};
+
+const HERO_BUTTON_THEMES: Record<HeroLogo, HeroButtonTheme> = {
+	[LOGO_DEFAULT]: {
+		learnGradient: "from-aurora-orangina to-aurora-lightorange",
+		docsGradient: "from-aurora-darkblue to-aurora-blue",
+	},
+	[LOGO_PRIDE]: {
+		learnGradient: "from-aurora-pride-red to-aurora-pride-yellow",
+		docsGradient: "from-aurora-pride-blue to-aurora-pride-violet",
+	},
+	[LOGO_TRANS]: {
+		learnGradient: "from-aurora-trans-blue to-aurora-trans-pink",
+		docsGradient: "from-aurora-trans-pink to-aurora-trans-blue",
+	},
+};
 
 export default function Hero({
 	introRef,
@@ -24,7 +45,7 @@ export default function Hero({
 }) {
 	const t = useTranslations("Introduction");
 	const router = useRouter();
-	const [manualLogo, setManualLogo] = useState<string | null>(null);
+	const [manualLogo, setManualLogo] = useState<HeroLogo | null>(null);
 	const isJune = useMemo(() => new Date().getMonth() === 5, []);
 	const seasonalLogo = isJune ? LOGO_PRIDE : LOGO_DEFAULT;
 	const activeLogo = manualLogo ?? seasonalLogo;
@@ -128,26 +149,46 @@ export default function Hero({
 					<div className="group relative">
 						<button
 							type="button"
-							className="relative inline-flex min-w-[250px] items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-aurora-orangina to-aurora-lightorange px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-aurora-orangina/25 active:scale-95"
+							className="relative inline-flex min-w-[250px] items-center justify-center gap-3 overflow-hidden rounded-xl px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
 							onClick={() =>
 								aboutRef.current?.scrollIntoView({ behavior: "smooth" })
 							}
 						>
-							<ArrowDown className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-0.5" />
-							{t("learn-more")}
-							<div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+							{LOGO_ROTATION.map((logo) => (
+								<div
+									key={logo}
+									className={`pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-r transition-opacity duration-700 ease-out ${
+										HERO_BUTTON_THEMES[logo].learnGradient
+									} ${activeLogo === logo ? "opacity-100" : "opacity-0"}`}
+								/>
+							))}
+							<span className="relative z-10 inline-flex items-center gap-3">
+								<ArrowDown className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-0.5" />
+								{t("learn-more")}
+							</span>
+							<div className="pointer-events-none absolute inset-0 z-20 rounded-xl bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 						</button>
 					</div>
 
 					<div className="group relative">
 						<button
 							type="button"
-							className="relative inline-flex min-w-[250px] items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-aurora-darkblue to-aurora-blue px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-aurora-darkblue/25 active:scale-95"
+							className="relative inline-flex min-w-[250px] items-center justify-center gap-3 overflow-hidden rounded-2xl px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
 							onClick={() => router.push("https://docs.getaurora.dev")}
 						>
-							{t("go-to-docs")}
-							<ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-							<div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+							{LOGO_ROTATION.map((logo) => (
+								<div
+									key={logo}
+									className={`pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r transition-opacity duration-700 ease-out ${
+										HERO_BUTTON_THEMES[logo].docsGradient
+									} ${activeLogo === logo ? "opacity-100" : "opacity-0"}`}
+								/>
+							))}
+							<span className="relative z-10 inline-flex items-center gap-3">
+								{t("go-to-docs")}
+								<ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+							</span>
+							<div className="pointer-events-none absolute inset-0 z-20 rounded-2xl bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 						</button>
 					</div>
 				</div>

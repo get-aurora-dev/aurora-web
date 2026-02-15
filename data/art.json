@@ -17,7 +17,7 @@
       "title": "Echo",
       "pronouns": "They/Them",
       "category": "characters",
-      "image": "/art/characters/echo.png",
+      "images": ["/art/characters/echo.png"],
       "profilePicture": "/art/profile_pictures/echo.png",
       "artist": "chandeleer"
     },
@@ -26,7 +26,7 @@
       "title": "Lumina",
       "pronouns": "She/Her",
       "category": "characters",
-      "image": "/art/characters/lumina.png",
+      "images": ["/art/characters/lumina.png"],
       "profilePicture": "/art/profile_pictures/lumina.png",
       "artist": "chandeleer"
     },
@@ -35,7 +35,7 @@
       "title": "Phlip",
       "pronouns": "He/Him",
       "category": "characters",
-      "image": "/art/characters/phlip.png",
+      "images": ["/art/characters/phlip.png"],
       "profilePicture": "/art/profile_pictures/phlip.png",
       "artist": "chandeleer"
     },
@@ -44,7 +44,10 @@
       "title": "Scope",
       "pronouns": "He/Him",
       "category": "characters",
-      "image": "/art/characters/scope.png",
+      "images": [
+        "/art/characters/scope.png",
+        "/art/characters/scope_from_the_front.png"
+      ],
       "profilePicture": "/art/profile_pictures/scope.png",
       "artist": "chandeleer"
     },
@@ -53,7 +56,7 @@
       "title": "Tina",
       "pronouns": "She/Her",
       "category": "characters",
-      "image": "/art/characters/tina.png",
+      "images": ["/art/characters/tina.png"],
       "profilePicture": "/art/profile_pictures/tina.png",
       "artist": "chandeleer"
     },
@@ -62,7 +65,7 @@
       "title": "Vincent",
       "pronouns": "He/Him",
       "category": "characters",
-      "image": "/art/characters/vincent.png",
+      "images": ["/art/characters/vincent.png"],
       "profilePicture": "/art/profile_pictures/vincent.webp",
       "artist": "chandeleer"
     },
