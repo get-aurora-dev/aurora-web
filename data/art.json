@@ -44,7 +44,7 @@
       "title": "Scope",
       "pronouns": "He/Him",
       "category": "characters",
-      "image": "/art/characters/scope.webp",
+      "image": "/art/characters/scope.png",
       "profilePicture": "/art/profile_pictures/scope.png",
       "artist": "chandeleer"
     },
@@ -122,7 +122,7 @@
       "thumbnail": "/art/wallpapers/wallpaper-8.jpg",
       "artist": "chandeleer"
     },
-     {
+    {
       "id": "wallpaper-9",
       "title": "Shangyuan",
       "category": "wallpapers",
