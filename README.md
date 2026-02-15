@@ -1,12 +1,23 @@
 # Aurora Web
 
 The official Aurora website, built with NextJS 16 and React 19, using TailwindCSS and shadcn/ui components.
+
 ## Getting Started
 
 ```bash
 pnpm i          # Install dependencies
 pnpm run dev    # Start development server at http://localhost:3000
+pnpm run build  # Build static files to ./out
+pnpm run preview
 ```
+
+## Static Deployment (Cloudflare Pages)
+
+This project is configured for static export.
+
+- Build command: `pnpm run build`
+- Build output directory: `out`
+- Root redirect: `/` -> `/en/` is handled by `public/_redirects`
 
 ## Contributing
 
@@ -50,12 +61,12 @@ aurora-web/
 ├── i18n/
 │   ├── config.ts       # Language configuration (single source of truth)
 │   ├── routing.ts      # next-intl routing setup
-│   └── request.ts      # Server-side locale handling
+│   └── request.ts      # next-intl request config
 ├── messages/           # Translation files
 │   ├── en.json         # English (reference)
 │   ├── de.json         # German
 │   ├── fr.json         # French
 │   ├── pt-PT.json      # Portuguese (Portugal)
 │   └── ru.json         # Russian
-└── middleware.ts       # Locale detection middleware
+└── public/_redirects   # Static host redirects
 ```

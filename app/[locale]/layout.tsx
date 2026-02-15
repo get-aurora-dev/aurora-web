@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Poltawski_Nowy } from "next/font/google";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
+import { notFound } from "next/navigation";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { DiscourseScript } from "./discourse-script";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
+import { locales, type Locale } from "@/i18n/config";
 
-const inter = Inter({ subsets: ["latin"] });
 const geist = Geist({ subsets: ["latin"] });
-const serifFont = Poltawski_Nowy({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Aurora - The Linux-based ultimate workstation",
@@ -24,20 +23,34 @@ export const metadata: Metadata = {
   },
 };
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
-  const locale = await getLocale();
-  const messages = await getMessages();
+  const { locale } = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
+  const messages = (await import(`../../messages/${locale}.json`)).default;
+
   return (
     <html lang={locale}>
       <head></head>
       <body className={geist.className}>
         <DiscourseScript />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
         <Toaster />

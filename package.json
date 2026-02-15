@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "node scripts/cache-contributors.mjs --force && next build",
     "cache-contributors": "node scripts/cache-contributors.mjs",
-    "start": "next start",
+    "preview": "python3 -m http.server 3000 --directory out",
+    "start": "pnpm run preview",
     "lint": "next lint"
   },
   "dependencies": {

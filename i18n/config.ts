@@ -6,7 +6,7 @@
  * 1. Create a translation file in /messages/{locale}.json (copy from en.json)
  * 2. Add an entry to the `languages` array below
  *
- * That's it! The routing and middleware will pick up the new language automatically.
+ * That's it! Routing and static locale generation will pick up the new language automatically.
  */
 
 export interface Language {
@@ -20,7 +20,7 @@ export interface Language {
 
 /**
  * All supported languages.
- * Add new languages here - they will be automatically available in routing and middleware.
+ * Add new languages here - they will be automatically available in routing and static exports.
  */
 export const languages: Language[] = [
   { code: 'en', name: 'English', nativeName: 'English' },
@@ -39,10 +39,7 @@ export type Locale = (typeof locales)[number];
 /** The default locale when none is specified */
 export const defaultLocale: Locale = 'en';
 
-/**
- * Generates a regex pattern for matching locale paths in URLs.
- * Used by Next.js middleware matcher.
- */
+/** Generates a regex pattern for matching locale paths in URLs. */
 export function getLocaleMatcherPattern(): string {
   return `(${locales.join('|')})`;
 }
