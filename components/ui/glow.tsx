@@ -111,7 +111,7 @@ export function GlowEffect({
     },
   };
 
-  const getBlurClass = (blur: GlowEffectProps["blur-sm"]) => {
+  const getBlurClass = (blur: GlowEffectProps["blur"]) => {
     if (typeof blur === "number") {
       return `blur-[${blur}px]`;
     }
