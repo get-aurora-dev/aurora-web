@@ -3,9 +3,12 @@
 The official Aurora website, built with NextJS 16 and React 19, using TailwindCSS and shadcn/ui components.
 
 ## Getting Started
-
+You need to have NodeJS 22 or higher installed already on your machine.
 ```bash
+
+corepack enable #enable PNPM
 pnpm i          # Install dependencies
+pnpm cache-contributors # Cache the contributors in a json file on disk for the contributions page
 pnpm run dev    # Start development server at http://localhost:3000
 pnpm run build  # Build static files to ./out
 pnpm run preview
