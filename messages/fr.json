@@ -34,7 +34,7 @@
 		"fedora-image-writer": "Fedora Image Writer",
 		"create-usb": "pour créer votre clé USB d'installation.",
 		"note": "Note : ",
-		"ventoy-not-supported": "Nos fichiers ISO sont incompatibles avec Ventoy.",
+		"ventoy-not-supported": "Ventoy et nos fichiers ISO sont incompatibles.",
 		"ready-to-download": "Prêt à télécharger",
 		"personalized-image": "Votre image Aurora personnalisée : ",
 		"developer-mode": "Mode développeur",
