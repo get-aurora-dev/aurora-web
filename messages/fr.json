@@ -88,7 +88,7 @@
 		"brew-ready": "Brew, paré pour coder.",
 		"brew-ready-text": "Brew est préinstallé et prêt à utiliser sur Aurora. Utilisez-le pour installer tous les outils CLI dont vous n'auriez jamais pu rêver. Brew est intégré de manière fiable pour ne jamais interférer avec votre système hôte.",
 		"brew-ready-red": "Pression immédiate.",
-		"containers-best-friends": "Les conteneurs, vos meilleurs amis.",
+		"containers-best-friends": "Les conteneurs, vos meilleurs alliés.",
 		"containers-best-friends-text": "Docker et Podman sont préconfigurés pour convenir à tous types de workflows, y compris une expérience CLI conteneurisée. Et avec Konsole, votre distrobox n'est qu'à un clic.",
 		"containers-best-friends-red": "Ne dites plus jamais 'ça marche sur ma config'.",
 		"preconfigured-work": "Préconfiguré et prêt pour un travail exigeant.",
@@ -158,8 +158,8 @@
 	"For-Developers": {
 		"title": "Aurora pour les développeurs",
 		"subtitle": "S'appuyant sur des fondations solides, Aurora Developer Experience (DX) est conçu pour faciliter la vie des développeurs en empaquetant des outils et applications couramment utilisés en un seul paquet.",
-		"local-ai": "Workflows IA Locaux",
-		"local-ai-text": "En incluant les pilotes GPU et les utilitaires couramment utilisés pour l'IA locale, Aurora facilite la mise en route de votre IA locale.",
+		"local-ai": "Workflows IA locaux",
+		"local-ai-text": "En intégrant les pilotes GPU et les utilitaires couramment utilisés pour l'IA locale, Aurora facilite la mise en route de votre IA.",
 		"local-ai-highlight": "Les robots sont là pour vous servir.",
 		"containers": "Outils de conteneurs préinstallés.",
 		"containers-text": "Aurora Developer Experience inclut Docker et Podman, offrant choix et flexibilité pour les workflows conteneurs les plus exigeants.",
@@ -167,9 +167,9 @@
 		"dev-tools": "Les outils de développement disponibles en un clic.",
 		"dev-tools-text": "L'expérience développeur inclut des outils de développement couramment utilisés comme VS Code et vient préconfiguré pour les workflows de développement conteneurisés avec DevContainers. Une simple commande et Jetbrains est prêt.",
 		"dev-tools-highlight": "Tout ce dont vous avez besoin, prêt à l'emploi.",
-		"homebrew": "Homebrew en service",
-		"homebrew-text": "Aurora inclut automatiquement Homebrew avec chaque installation, facilitant la découverte, l'installation et la mise à jour de vos outils CLI favoris. Trouvez des milliers de bibliothèques et d'outils dans les bibliothèques brew, intégrés en toute sécurité pour ne jamais interférer avec votre système hôte.",
-		"homebrew-highlight": "L'outillage de développement n'a jamais été plus pratique."
+		"homebrew": "Homebrew prêt à l'emploi",
+		"homebrew-text": "Dès l'installation, Aurora intègre Hombrew automatiquement, facilitant la découverte, l'installation et la mise à jour de vos outils CLI favoris. Trouvez des milliers de bibliothèques et d'outils dans les bibliothèques brew, intégrés en toute sécurité pour ne jamais interférer avec votre système hôte.",
+		"homebrew-highlight": "Les outils de développement n'ont jamais été aussi pratiques."
 	},
 	"Your-New-Desktop": {
 		"title": "Ceci est votre nouveau bureau.",
