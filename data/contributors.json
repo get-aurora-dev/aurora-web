@@ -12,12 +12,6 @@
       "title": "Taming the website and other random stuff"
     },
     {
-      "github": "hanthor",
-      "role": "maintainer",
-      "title": "LTS Specialist and shameless AI enjoyer",
-      "sponsorLink": "https://github.com/sponsors/hanthor"
-    },
-    {
       "github": "renner0e",
       "role": "maintainer"
     },
@@ -30,7 +24,13 @@
       "role": "contributor",
       "sponsorLink": "https://github.com/sponsors/tulilirockz"
     },
-     {
+    {
+      "github": "hanthor",
+      "role": "contributor",
+      "title": "LTS Specialist and shameless AI enjoyer",
+      "sponsorLink": "https://github.com/sponsors/hanthor"
+    },
+    {
       "github": "castrojo",
       "role": "contributor"
     },
