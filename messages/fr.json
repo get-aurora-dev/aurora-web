@@ -147,13 +147,13 @@
 		"title": "Comment Aurora s'adapte-t-il à vous ?",
 		"subtitle": "Voici quelques raisons pour lesquelles vous devriez envisager d'utiliser Aurora.",
 		"automatic-updates": "Mises à jour automatiques, pour toujours.",
-		"automatic-updates-text": "Aurora télécharge et applique les mises à jour automatiquement en arrière-plan. Cela inclut le système d'exploitation et toutes les applications installées.",
+		"automatic-updates-text": "Aurora télécharge et applique les mises à jour automatiquement en arrière-plan. Cela comprend le système d'exploitation et toutes les applications installées.",
 		"automatic-updates-highlight": "Laissez-nous nous occuper de vos mises à jour.",
-		"hardware-support": "Support matériel étendu.",
-		"hardware-support-text": "Aurora supporte pour toutes les cartes graphiques et CPU, y compris les GPU de Nvidia. Le support matériel étendu s'étend aux manettes de jeu et plus de pilotes d'imprimante.",
+		"hardware-support": "Compatibilité matérielle étendue.",
+		"hardware-support-text": "Aurora est compatible avec toutes les cartes graphiques et CPU, y compris les GPU de Nvidia. La compatibilité matérielle étendue comprend les manettes de jeu et plus de pilotes d'imprimantes encore.",
 		"hardware-support-highlight": "Jouer ? Pas de problème.",
 		"helping-you": "Vous aider à chaque étape.",
-		"helping-you-text": "Aurora intègre des scripts et des outils courrants pour vous aider à démarrer rapidement et configurer vos logiciels habituels de manière non intrusive."
+		"helping-you-text": "Aurora intègre des scripts et des outils courrants pour vous aider à démarrer rapidement et configurer vos logiciels habituels de manière sans être envahissant."
 	},
 	"For-Developers": {
 		"title": "Aurora pour les développeurs",
