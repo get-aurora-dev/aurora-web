@@ -100,7 +100,7 @@
 	},
 	"Build-Your-Own": {
 		"build-your-own": "Construisez votre propre Aurora",
-		"want-to-build": "Vous voulez construire votre propre image Aurora ? Personnaliser votre image avec vos propres thèmes dans les moindres détails ? Utilisez notre modèle d'image pour vous aider à commencer. Vous avez simplement besoin de quelques connaissances sur la conteneurisation avec Docker et d'un peu de temps. Allons-y !",
+		"want-to-build": "Vous voulez construire votre propre image Aurora et la personnaliser dans les moindres détails ? Utilisez notre modèle d'image pour vous aider à commencer. Vous avez simplement besoin de quelques connaissances en conteneurs Docker et d'un peu de temps. Allons-y !",
 		"get-image-template": "Obtenir le modèle d'image"
 	},
 	"Footer": {
