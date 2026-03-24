@@ -55,7 +55,7 @@
 		"onboard": "Embarquez dans le vaisseau vers votre nouveau système d'exploitation de bureau.",
 		"gaze": "Observons les étoiles ensemble, cher voyageur.",
 		"learn-more": "En savoir plus",
-		"tagline": "est là. Profitez d'une expérience respectueuse de la vie privée, rapide et stable sur votre PC.",
+		"tagline": "est là. Profitez d'un système respectueux de la vie privée, rapide et stable sur votre PC.",
 		"go-to-docs": "Lire la documentation",
 		"loop-1": "Développez votre prochaine application.",
 		"loop-2": "Lancez une fusée spatiale.",
@@ -68,15 +68,15 @@
 	},
 	"About-Aurora": {
 		"for-end-user": "Aurora pour le grand public",
-		"reliable": "Aurora vous propose une expérience d'utilisation fiable, sûre et fluide pour les tâches quotidiennes et bien au-delà.",
+		"reliable": "Aurora vous offre une utilisation fiable, sûre et fluide pour les tâches quotidiennes et bien au-delà.",
 		"simply-delightful": "Agréable, tout simplement.",
-		"simply-delightful-text": "Aurora propose un bureau KDE Plasma optimisé pour une expérience super fluide et agréable qui peut être personnalisée à l'infini.",
+		"simply-delightful-text": "Aurora offre un bureau KDE Plasma optimisé pour une expérience fluide et agréable qui peut être personnalisée à l'infini.",
 		"simply-delightful-purple": "Vous pouvez même déplacer la barre des tâches.",
 		"speed-reliability": "Vitesse et Fiabilité",
 		"speed-reliability-text": "Une pièce d'horlogerie parfaitement réglée et optimisée, pour une efficacité et une fiabilité maximales.",
-		"speed-reliability-purple": "Le bureau Linux enfin repensé.",
+		"speed-reliability-purple": "Le bureau Linux réinventé.",
 		"zero-maintenance": "Zéro maintenance",
-		"zero-maintenance-text": "Une seule installation du système suffira : les mises à jour de vos applications et du système sont appliquées automatiquement en arrière-plan.",
+		"zero-maintenance-text": "Une seule installation d'Aurora suffira : les mises à jour de vos applications et du système sont appliquées automatiquement en arrière-plan.",
 		"zero-maintenance-purple": "Configurez puis profitez, tout simplement.",
 		"hardware-support": "Support matériel",
 		"hardware-support-text": "Nous proposons des versions spécifiques pour les utilisateurs Surface et ASUS et toutes incluent un support matériel étendu pour les manettes de jeu, les imprimantes et bien plus encore.",
@@ -86,16 +86,16 @@
 		"for-developers": "Aurora pour les développeurs",
 		"pro-stargazing": "Êtes-vous astronome professionnel ? La version développeur garde les qualités de la même base et repousse les limites.",
 		"brew-ready": "Brew, paré pour coder.",
-		"brew-ready-text": "Brew est préinstallé et prêt à utiliser. Choisissez parmi plusieurs milliers d'outils CLI disponibles. Brew est intégré de manière à ne pas interférer avec votre système hôte.",
+		"brew-ready-text": "Brew est préinstallé et prêt à utiliser. Choisissez parmi plusieurs milliers d'outils CLI disponibles. Brew est intégré de manière sûre pour ne pas interférer avec votre système hôte.",
 		"brew-ready-red": "Pression immédiate.",
-		"containers-best-friends": "Les conteneurs, vos meilleurs amis.",
+		"containers-best-friends": "Les conteneurs, vos meilleurs alliés.",
 		"containers-best-friends-text": "Docker et Podman sont préconfigurés pour convenir à tous types de workflows, y compris pour de la CLI conteneurisée. Avec Konsole, votre distrobox est facilement accessible.",
 		"containers-best-friends-red": "Ne dites plus jamais 'ça marche sur ma config'.",
 		"preconfigured-work": "Préconfiguré et prêt pour un travail exigeant.",
 		"preconfigured-work-text": "Visual Studio Code est préinstallé et préconfiguré pour s'adapter aux workflows qui reposent sur DevContainers. En une seule commande, vous pouvez obtenir Jetbrains Toolbox si vous préférez le café.",
 		"preconfigured-work-red": "Ou utilisez Neovim, si vous savez comment en sortir.",
 		"robots-take-over": "Laissez les robots prendre le relai.",
-		"robots-take-over-text": "Si vous utilisez des LLM locaux ou le machine learning, Aurora est là pour vous. Exécutez des LLM privés avec Ollama, lancez une distrobox pytorch pour du travail IA intensif.",
+		"robots-take-over-text": "Si vous utilisez des LLM locaux ou le <i>machine learning</i>, Aurora est là pour vous. Exécutez des LLM privés avec Ollama, lancez une distrobox pytorch pour du travail IA intensif.",
 		"robots-take-over-red": "Utilisez les robots à votre avantage."
 	},
 	"Build-Your-Own": {
@@ -128,12 +128,12 @@
 			},
 			"q2": {
 				"question": "Qu'est-ce qu'Aurora Developer Edition ? (Aurora-DX) ?",
-				"answer": "Aurora Developer Edition est une version d'Aurora intégrant des paquets supplémentaires qui répondent aux besoins des développeurs. Cette image contient VS Code préinstallé pour utiliser des dev containers, Docker et Podman comme environnements d'exécution, des outils pour créer et gérer des machines virtuelles, des outils pour créer un environnement de développement conteneurisé avec DevPod et bien plus encore. Enfin, des outils pour les développeurs 'cloud-native' sont également inclus. Vous pouvez toujours en installer plus via brew ! Pour consulter la liste complète des paquets, cliquez sur le lien.",
+				"answer": "Aurora Developer Edition est une version d'Aurora intégrant des paquets supplémentaires qui répondent aux besoins des développeurs. Cette image contient VS Code préinstallé pour utiliser des dev containers, Docker et Podman comme environnements d'exécution, des outils pour créer et gérer des machines virtuelles, des outils pour créer un environnement de développement conteneurisé avec DevPod et bien plus encore. Enfin, des outils pour les développeurs <i>cloud-native</i> sont également inclus. Vous pouvez toujours en installer plus via brew ! Pour consulter la liste complète des paquets, cliquez sur le lien.",
 				"optionalLink": "https://github.com/ublue-os/bluefin/blob/main/packages.json"
 			},
 			"q3": {
 				"question": "Quelle est la différence entre Kinoite et Aurora ?",
-				"answer": "Kinoite offre une experience 'stock' et Aurora y ajoute de nombreuses améliorations et ajustements, comme des pilotes supplémentaires pour diverses imprimantes, adaptateurs réseau, manettes de jeu, etc, ainsi que des codecs.",
+				"answer": "Kinoite offre une experience 'stock' et Aurora y ajoute de nombreuses améliorations et ajustements, comme des pilotes supplémentaires pour diverses imprimantes, adaptateurs réseau, manettes de jeu, des codecs, etc.",
 				"optionalLink": ""
 			},
 			"q4": {
@@ -150,10 +150,10 @@
 		"automatic-updates-text": "Aurora télécharge et applique les mises à jour automatiquement en arrière-plan, que ce soit le système d'exploitation ou toutes les applications installées.",
 		"automatic-updates-highlight": "Nous nous occupons de vos mises à jour.",
 		"hardware-support": "Compatibilité matérielle étendue.",
-		"hardware-support-text": "Aurora est compatible avec toutes les cartes graphiques et CPU, y compris les GPU de Nvidia. La compatibilité matérielle étendue inclut les manettes de jeu et plus de pilotes d'imprimantes encore.",
-		"hardware-support-highlight": "Jouer ? Sans problème.",
+		"hardware-support-text": "Aurora est compatible avec toutes les cartes graphiques et CPU, y compris les GPU de Nvidia. La compatibilité matérielle étendue inclut les manettes de jeu et davantage de pilotes d'imprimantes.",
+		"hardware-support-highlight": "Jouer ? Aucun problème.",
 		"helping-you": "Vous aider à chaque étape.",
-		"helping-you-text": "Aurora intègre des scripts et des utilitaires pour vous aider à vous lancer rapidement et configurer vos logiciels habituels."
+		"helping-you-text": "Aurora intègre des scripts et des utilitaires pour vous aider à démarrer rapidement et configurer vos logiciels habituels."
 	},
 	"For-Developers": {
 		"title": "Aurora pour les développeurs",
@@ -163,12 +163,12 @@
 		"local-ai-highlight": "Les robots sont là pour vous servir.",
 		"containers": "Plateformes de conteneurs préinstallées.",
 		"containers-text": "Aurora Developer Experience intègre Docker et Podman, offrant choix et flexibilité pour les workflows conteneurs les plus exigeants.",
-		"containers-highlight": "Cloud-Native n'a jamais été aussi facile.",
+		"containers-highlight": "<i>Cloud-native</i> n'a jamais été aussi facile.",
 		"dev-tools": "Des outils de développement disponibles en un clic.",
-		"dev-tools-text": "L'expérience développeur intègre des outils de développement courants tels que VS Code et est préconfigurée pour les workflows de développement conteneurisés avec DevContainers. Une simple commande et les outils Jetbrains sont prêts.",
+		"dev-tools-text": "L'expérience développeur intègre des outils de développement courants tels que VS Code et est préconfigurée pour les workflows de développement DevContainers. Une simple commande et les outils Jetbrains sont prêts.",
 		"dev-tools-highlight": "Tout ce dont vous avez besoin, prêt à l'emploi.",
 		"homebrew": "Homebrew prêt à l'emploi",
-		"homebrew-text": "Aurora intègre Hombrew par défaut, facilitant ainsi la découverte, l'installation et la mise à jour de vos outils CLI favoris. Trouvez des milliers de bibliothèques et d'outils dans le catalogue brew. Integration sécurisée de brew sans interférence avec votre système hôte.",
+		"homebrew-text": "Aurora intègre Hombrew par défaut, facilitant ainsi la découverte, l'installation et la mise à jour de vos outils CLI favoris. Trouvez des milliers de bibliothèques et d'outils dans le catalogue brew. Intégration sûre de brew sans interférence avec votre système hôte.",
 		"homebrew-highlight": "Des outils de développement facilement accessibles."
 	},
 	"Your-New-Desktop": {
@@ -182,12 +182,12 @@
 		"defaults-highlight": "Tout est prêt, soyez tranquille."
 	},
 	"Paradigm-Shift": {
-		"title": "Aurora redéfinit le bureau Linux.",
-		"subtitle": "Pour repenser entièrement le bureau Linux, nous avons construit Aurora à partir de nouveaux principes et technologies. Quels sont les avantages pour vous ?",
+		"title": "Aurora réinvente le bureau Linux.",
+		"subtitle": "Pour repenser entièrement le bureau Linux, nous avons construit Aurora à partir de principes et de technologies nouvelles. Quels sont les avantages pour vous ?",
 		"rock-solid": "Fiabilité inégalée.",
 		"rock-solid-text-1": "Nous avons construit Aurora à partir de technologies et des principes en rupture avec le bureau Linux traditionnel.",
 		"rock-solid-text-2": "Les mises à jour sont conçues et testées avant d'être déployées en une image unique qui s'applique en arrière-plan.",
-		"rock-solid-text-3": "Et si une nouvelle version d'Aurora pose problème, vous pouvez revenir à une version antérieure fiable.",
+		"rock-solid-text-3": "Et si une nouvelle version d'Aurora pose problème, vous pouvez revenir à une image antérieure fiable.",
 		"rock-solid-highlight": "Le déploiement par image est l'avenir.",
 		"app-store": "Un magasin d'applications unique.",
 		"app-store-text": "Aurora intègre une logithèque unique pour les développeurs et les utilisateurs qui s'appuie sur la richesse du magasin d'applications Flathub. Pour la première fois dans l'histoire de Linux, il existe enfin une magasin d'applications où les développeurs peuvent publier leurs applications facilement et gagner de l'argent pour soutenir leur travail OSS.",
@@ -230,7 +230,7 @@
 	},
 	"News": {
 		"title": "Actualités",
-		"latest-from-blog": "Dernières du Blog",
+		"latest-from-blog": "Dernières nouvelles du blog",
 		"loading": "Chargement des articles de blog...",
 		"failed-to-load": "Échec du chargement des articles de blog",
 		"no-posts": "Aucun article de blog disponible",
@@ -238,9 +238,9 @@
 	},
 	"Docs-Community": {
 		"title": "Documentation et Communauté",
-		"subtitle": "Si vous voulez consulter notre documentation, y contribuer ou avez besoin d'aide / voulez discuter avec notre communauté, vous le trouverez ici. Nous avons des forums et un serveur Discord.",
+		"subtitle": "Si vous voulez consulter notre documentation, y contribuer ou avez besoin d'aide, discuter avec notre communauté, vous le trouverez ici. Nous avons des forums et un serveur Discord.",
 		"docs-title": "Notre documentation",
-		"docs-text": "Obtenez de l'aide en lisant la documentation, ou contribuez-y si vous voulez l'améliorer.",
+		"docs-text": "Trouvez de l'aide en lisant la documentation, ou contribuez-y si vous voulez l'améliorer.",
 		"docs-highlight": "La connaissance à portée de main.",
 		"contribute-docs": "Contribuer à la documentation",
 		"read-docs": "Lire la documentation",
