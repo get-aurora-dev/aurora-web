@@ -168,7 +168,7 @@
 		"dev-tools-text": "L'expérience développeur intègre des outils de développement courants tels que VS Code et est préconfigurée pour les workflows de développement DevContainers. Une simple commande et les outils Jetbrains sont prêts.",
 		"dev-tools-highlight": "Tout ce dont vous avez besoin, prêt à l'emploi.",
 		"homebrew": "Homebrew prêt à l'emploi",
-		"homebrew-text": "Aurora intègre Hombrew par défaut, facilitant ainsi la découverte, l'installation et la mise à jour de vos outils CLI favoris. Trouvez des milliers de bibliothèques et d'outils dans le catalogue brew. Intégration sûre de brew sans interférence avec votre système hôte.",
+		"homebrew-text": "Aurora intègre Homebrew par défaut, facilitant ainsi la découverte, l'installation et la mise à jour de vos outils CLI favoris. Trouvez des milliers de bibliothèques et d'outils dans le catalogue brew. Intégration sûre de brew sans interférence avec votre système hôte.",
 		"homebrew-highlight": "Des outils de développement facilement accessibles."
 	},
 	"Your-New-Desktop": {
