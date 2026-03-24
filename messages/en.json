@@ -138,7 +138,7 @@
 			},
 			"q4": {
 				"question": "Where can I get the latest news and discussions about Aurora?",
-				"answer": "Check out our Github discussions for the latest updates and discussions on Aurora.",
+				"answer": "Check out our GitHub Discussions for the latest updates and discussions on Aurora.",
 				"optionalLink": "https://github.com/ublue-os/aurora/discussions"
 			}
 		}
