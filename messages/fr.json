@@ -182,15 +182,15 @@
 		"defaults-highlight": "Tout est prêt, soyez tranquille."
 	},
 	"Paradigm-Shift": {
-		"title": "Aurora est un changement de paradigme pour Linux.",
-		"subtitle": "Pour repenser entièrement l'expérience du bureau Linux, nous avons construit Aurora à partir de nouveaux principes et technologies. Quels sont les avantages pour vous ?",
-		"rock-solid": "Solide comme un roc.",
-		"rock-solid-text-1": "Nous avons construit Aurora à partir d'une technologie et des principes bien différents de ceux d'un bureau Linux traditionnel.",
+		"title": "Aurora redéfinit le bureau Linux.",
+		"subtitle": "Pour repenser entièrement le bureau Linux, nous avons construit Aurora à partir de nouveaux principes et technologies. Quels sont les avantages pour vous ?",
+		"rock-solid": "Fiabilité inégalée.",
+		"rock-solid-text-1": "Nous avons construit Aurora à partir de technologies et des principes en rupture avec le bureau Linux traditionnel.",
 		"rock-solid-text-2": "Les mises à jour sont conçues et testées avant d'être déployées en une image unique qui s'applique en arrière-plan.",
-		"rock-solid-text-3": "Et si une nouvelle version d'Aurora cause problème, vous pouvez revenir à une version antérieure fiable.",
+		"rock-solid-text-3": "Et si une nouvelle version d'Aurora pose problème, vous pouvez revenir à une version antérieure fiable.",
 		"rock-solid-highlight": "Le déploiement par image est l'avenir.",
 		"app-store": "Un magasin d'applications unique.",
-		"app-store-text": "Aurora intègre une logithèque unique pour les développeurs et les utilisateurs qui s'appuie sur la richesse du magasin d'applications Flathub. Pour la première fois dans l'histoire de Linux, il existe une magasin d'applications où les développeurs peuvent publier leurs applications facilement et gagner de l'argent pour soutenir leur travail OSS.",
+		"app-store-text": "Aurora intègre une logithèque unique pour les développeurs et les utilisateurs qui s'appuie sur la richesse du magasin d'applications Flathub. Pour la première fois dans l'histoire de Linux, il existe enfin une magasin d'applications où les développeurs peuvent publier leurs applications facilement et gagner de l'argent pour soutenir leur travail OSS.",
 		"app-store-highlight": "C'est l'année du magasin d'applications Linux.",
 		"checkout-flathub": "Découvrez Flathub",
 		"extendable": "Facilement auditable et extensible.",
@@ -245,14 +245,14 @@
 		"contribute-docs": "Contribuer à la documentation",
 		"read-docs": "Lire la documentation",
 		"community-title": "Communauté",
-		"community-text": "Nous avons des forums pour posez vos questions et discuter de sujets techniques, ou rejoignez notre serveur Discord pour bavarder avec d'autres utilisateurs et développeurs Aurora.",
+		"community-text": "Nous avons des forums pour poser vos questions et discuter de sujets techniques, ou rejoignez notre serveur Discord pour bavarder avec d'autres utilisateurs et développeurs Aurora.",
 		"community-highlight": "Rejoignez la conversation.",
-		"visit-forums": "Visiter les Forums",
+		"visit-forums": "Visiter les forums",
 		"join-discord": "Rejoindre Discord"
 	},
 	"Contributors-Page": {
 		"title": "Nos contributeurs",
-		"subtitle": "Aurora est construit par des personnes passionnées du monde entier. Merci à tous les contributeurs et mainteneurs qui rendent Aurora possible.",
+		"subtitle": "Aurora est conçu par des personnes passionnées du monde entier. Merci à tous les contributeurs et mainteneurs qui rendent Aurora possible.",
 		"back-home": "Retour à l'accueil",
 		"view-github": "Voir sur GitHub",
 		"sponsor-title": "Soutenez nos contributeurs",
@@ -271,7 +271,7 @@
 		"all-contributors-subtitle": "Tous ceux qui ont contribué du code au dépôt Aurora.",
 		"loading": "Chargement des contributeurs...",
 		"join-title": "Vous voulez contribuer ?",
-		"join-subtitle": "Nous accueillons les contributions de toutes sortes : code, documentation, traductions, et plus !",
+		"join-subtitle": "Toutes les formes de contributions sont les bienvenues : code, documentation, traductions, et plus !",
 		"contribute-github": "Contribuer sur GitHub",
 		"join-discord": "Rejoignez notre Discord",
 		"footer-note": "Merci à tous nos contributeurs qui rendent Aurora possible.",
@@ -305,7 +305,7 @@
 			"wallpapers": "Fonds d'écran"
 		},
 		"contribute-title": "Contribuez Votre Art",
-		"contribute-description": "Aurora s'engage à soutenir l'art véritablement créé par des humains. Chaque mois, vous recevrez un nouveau fond d'écran. Vous voulez nous envoyer votre création ? Faites une PR sur notre dépôt de fonds d'écran et n'importe qui pourra l'installer via brew. Si nous aimons votre travail, nous pourrions vous commander le fond d'écran officiel du mois prochain.",
+		"contribute-description": "Aurora s'engage à soutenir l'art véritablement créé par des humains. Chaque mois, vous recevrez un nouveau fond d'écran. Vous voulez nous envoyer votre création ? Faites une PR sur notre dépôt de fonds d'écran et tous les utilisateurs pourront l'installer via brew. Si nous aimons votre travail, nous pourrions vous commander le fond d'écran officiel du mois prochain.",
 		"contribute-button": "Soumettre un fond d'écran"
 	}
 }
