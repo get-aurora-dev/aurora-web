@@ -129,7 +129,7 @@
 			"q2": {
 				"question": "Czym jest Aurora Developer Edition (Aurora-DX)?",
 				"answer": "Aurora Developer Edition to specjalna edycja zawierająca pakiety skrojone pod programistów. Zawiera m.in. preinstalowane VS Code z obsługą DevContainers, środowiska Docker i Podman, narzędzia do zarządzania maszynami wirtualnymi oraz DevPod. To idealne rozwiązanie dla deweloperów cloud-native. Więcej narzędzi zawsze możesz doinstalować przez brew! Jeśli chcesz zobaczyć pełną listę pakietów, kliknij w link.",
-				"optionalLink": "https://github.com/ublue-os/bluefin/blob/main/packages.json"
+				"optionalLink": "https://github.com/ublue-os/aurora/blob/main/build_files/dx/00-dx.sh"
 			},
 			"q3": {
 				"question": "Jaka jest różnica między Fedora Kinoite a Aurorą?",
@@ -138,8 +138,8 @@
 			},
 			"q4": {
 				"question": "Gdzie znajdę najnowsze wiadomości i rozmowy o Aurorze?",
-				"answer": "Sprawdź nasze forum Discourse, aby być na bieżąco z aktualizacjami i dyskusjami.",
-				"optionalLink": "https://universal-blue.discourse.group/c/bluefin/6"
+				"answer": "Sprawdź nasze dyskusje na GitHubie, aby być na bieżąco z aktualizacjami i dyskusjami.",
+				"optionalLink": "https://github.com/ublue-os/aurora/discussions"
 			}
 		}
 	},
