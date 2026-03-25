@@ -129,7 +129,7 @@
 			"q2": {
 				"question": "Qu'est-ce qu'Aurora Developer Edition ? (Aurora-DX) ?",
 				"answer": "Aurora Developer Edition est une version d'Aurora intégrant des paquets supplémentaires qui répondent aux besoins des développeurs. Cette image contient VS Code préinstallé pour utiliser des dev containers, Docker et Podman comme environnements d'exécution, des outils pour créer et gérer des machines virtuelles, des outils pour créer un environnement de développement conteneurisé avec DevPod et bien plus encore. Enfin, des outils pour les développeurs <i>cloud-native</i> sont également inclus. Vous pouvez toujours en installer plus via brew ! Pour consulter la liste complète des paquets, cliquez sur le lien.",
-				"optionalLink": "https://github.com/ublue-os/bluefin/blob/main/packages.json"
+				"optionalLink": "https://github.com/ublue-os/aurora/blob/main/build_files/dx/00-dx.sh"
 			},
 			"q3": {
 				"question": "Quelle est la différence entre Kinoite et Aurora ?",
