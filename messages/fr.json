@@ -73,7 +73,7 @@
 		"simply-delightful-text": "Aurora offre un bureau KDE Plasma optimisé pour une expérience fluide, agréable et entièrement personnalisable.",
 		"simply-delightful-purple": "Vous pouvez même déplacer la barre des tâches.",
 		"speed-reliability": "Vitesse et Fiabilité",
-		"speed-reliability-text": "Une pièce d'horlogerie parfaitement réglée et optimisée, pour une efficacité et une fiabilité maximales.",
+		"speed-reliability-text": "Un système parfaitement réglé et optimisé, pour une efficacité et une fiabilité maximales.",
 		"speed-reliability-purple": "Le bureau Linux réinventé.",
 		"zero-maintenance": "Zéro maintenance",
 		"zero-maintenance-text": "Une seule installation d'Aurora suffira : les mises à jour de vos applications et du système sont appliquées automatiquement en arrière-plan.",
@@ -118,7 +118,7 @@
 	},
 	"FAQ": {
 		"faq-title": "FAQ Aurora",
-		"faq-intro": "Vous souhaitez en savoir plus ? Trouvez les réponses aux questions les plus essentielles.",
+		"faq-intro": "Vous souhaitez en savoir plus ? Trouvez les réponses à vos questions.",
 		"click-here": "Cliquez ici !",
 		"questions": {
 			"q1": {
@@ -190,7 +190,7 @@
 		"rock-solid-text-3": "Si une nouvelle image d'Aurora pose problème, vous pouvez toujours revenir à une image antérieure fonctionnelle.",
 		"rock-solid-highlight": "Le déploiement par image est l'avenir.",
 		"app-store": "Une logithèque unique.",
-		"app-store-text": "Aurora intègre une logithèque unique pour les développeurs et les utilisateurs qui s'appuie sur la richesse du magasin d'applications Flathub. Pour la première fois dans l'histoire de Linux, il existe enfin une magasin d'applications où les développeurs peuvent publier leurs applications facilement et recevoir des dons pour soutenir leur travail OSS.",
+		"app-store-text": "Aurora intègre une logithèque unique pour les développeurs et les utilisateurs qui s'appuie sur la richesse du magasin d'applications Flathub. Enfin un magasin d'applications où les développeurs peuvent publier leurs applications facilement et recevoir des dons pour soutenir leur travail OSS.",
 		"app-store-highlight": "C'est l'année du magasin d'applications Linux.",
 		"checkout-flathub": "Découvrez Flathub",
 		"extendable": "Facilement auditable et extensible.",
@@ -245,7 +245,7 @@
 		"contribute-docs": "Contribuer à la documentation",
 		"read-docs": "Lire la documentation",
 		"community-title": "Communauté",
-		"community-text": "Nous avons des forums pour poser vos questions et discuter de sujets techniques, ou rejoignez notre serveur Discord pour bavarder avec d'autres utilisateurs et développeurs Aurora.",
+		"community-text": "Nous avons des forums pour poser vos questions et discuter de sujets techniques, ou rejoignez notre serveur Discord pour dicuter avec la communauté Aurora.",
 		"community-highlight": "Rejoignez la conversation.",
 		"visit-forums": "Visiter les forums",
 		"join-discord": "Rejoindre Discord"
