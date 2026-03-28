@@ -84,7 +84,7 @@
 	},
 	"About-AuroraDx": {
 		"for-developers": "Aurora pour les développeurs",
-		"pro-stargazing": "Êtes-vous astronome professionnel ? La version développeur garde les qualités de la même base et repousse les limites.",
+		"pro-stargazing": "Êtes-vous développeur ? La version développeur garde les qualités de la même base et repousse les limites.",
 		"brew-ready": "Brew, paré pour coder.",
 		"brew-ready-text": "Brew est préinstallé et prêt à utiliser. Choisissez parmi plusieurs milliers d'outils CLI disponibles. Brew est intégré de manière sûre pour ne pas interférer avec votre système hôte.",
 		"brew-ready-red": "Pression immédiate.",
@@ -92,7 +92,7 @@
 		"containers-best-friends-text": "Docker et Podman sont préconfigurés pour convenir à tous types de workflows, y compris pour de la CLI conteneurisée. Avec Konsole, votre distrobox est facilement accessible.",
 		"containers-best-friends-red": "Ne dites plus jamais 'ça marche sur ma config'.",
 		"preconfigured-work": "Préconfiguré et prêt pour un travail exigeant.",
-		"preconfigured-work-text": "Visual Studio Code est préinstallé et préconfiguré pour s'adapter aux workflows qui reposent sur DevContainers. En une seule commande, vous pouvez obtenir Jetbrains Toolbox si vous préférez le café.",
+		"preconfigured-work-text": "Visual Studio Code est préinstallé et préconfiguré pour s'adapter aux workflows qui reposent sur DevContainers. En une seule commande, vous pouvez installer Jetbrains Toolbox.",
 		"preconfigured-work-red": "Ou utilisez Neovim, si vous savez comment en sortir.",
 		"robots-take-over": "Laissez les robots prendre le relai.",
 		"robots-take-over-text": "Si vous utilisez des LLM locaux ou le <i>machine learning</i>, Aurora est là pour vous. Exécutez des LLM privés avec Ollama, lancez une distrobox pytorch pour du travail IA intensif.",
