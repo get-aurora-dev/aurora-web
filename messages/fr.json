@@ -94,9 +94,9 @@
 		"preconfigured-work": "Préconfiguré et prêt pour un travail exigeant.",
 		"preconfigured-work-text": "Visual Studio Code est préinstallé et préconfiguré pour s'adapter aux workflows qui reposent sur DevContainers. En une seule commande, vous pouvez installer Jetbrains Toolbox.",
 		"preconfigured-work-red": "Ou utilisez Neovim, si vous savez comment en sortir.",
-		"robots-take-over": "Laissez les robots prendre le relais.",
+		"robots-take-over": "Laissez l'IA prendre le relais.",
 		"robots-take-over-text": "Si vous utilisez des LLM locaux ou le machine learning, Aurora est là pour vous. Exécutez des LLM privés avec Ollama, lancez une distrobox pytorch pour du travail IA intensif.",
-		"robots-take-over-red": "Utilisez les robots à votre avantage."
+		"robots-take-over-red": "Utilisez l'IA à votre avantage."
 	},
 	"Build-Your-Own": {
 		"build-your-own": "Construisez votre propre Aurora",
@@ -106,7 +106,7 @@
 	"Footer": {
 		"go-up": "Remonter",
 		"proudly-built": "Fièrement construit avec",
-		"proudly-built-phrase": "une boîte à outils communautaire conçue pour réinventer le bureau Linux. Créé par passion. Bienvenue dans le 'cloud-native' indépendant.",
+		"proudly-built-phrase": "une boîte à outils communautaire conçue pour réinventer le bureau Linux. Créé par passion. Bienvenue dans le 'cloud-native indépendant'.",
 		"built-with-love": "Construit avec ❤️ par des contributeurs du monde entier.",
 		"refined-logo": "Logo raffiné créé par @reisvg.",
 		"background-credits": "Crédits image d'arrière plan : ",
