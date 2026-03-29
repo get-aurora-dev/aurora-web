@@ -77,7 +77,7 @@
 		"speed-reliability-purple": "Le bureau Linux réinventé.",
 		"zero-maintenance": "Zéro maintenance",
 		"zero-maintenance-text": "Une seule installation d'Aurora suffira : les mises à jour de vos applications et du système sont appliquées automatiquement en arrière-plan.",
-		"zero-maintenance-purple": "Configurez puis profitez, tout simplement.",
+		"zero-maintenance-purple": "Paramétrez puis profitez, tout simplement.",
 		"hardware-support": "Compatibilité matérielle",
 		"hardware-support-text": "Nous proposons des versions spécifiques pour les utilisateurs Surface et ASUS et toutes incluent un support matériel étendu pour les manettes de jeu, les imprimantes et bien plus encore.",
 		"hardware-support-purple": "N'oubliez pas d'imprimer les factures du vaisseau spatial."
@@ -133,7 +133,7 @@
 			},
 			"q3": {
 				"question": "Quelle est la différence entre Kinoite et Aurora ?",
-				"answer": "Kinoite offre une experience 'stock' et Aurora y ajoute de nombreuses améliorations et ajustements, comme des codecs, des pilotes supplémentaires pour des imprimantes, adaptateurs réseau, manettes de jeu, etc.",
+				"answer": "Kinoite offre une experience 'stock' et Aurora y ajoute de nombreuses améliorations et ajustements comme des codecs, des pilotes supplémentaires pour des imprimantes, adaptateurs réseau, manettes de jeu, etc.",
 				"optionalLink": ""
 			},
 			"q4": {
@@ -153,22 +153,22 @@
 		"hardware-support-text": "Aurora est compatible avec toutes les cartes graphiques et CPU, y compris les GPU de Nvidia. La compatibilité matérielle étendue inclut les manettes de jeu et davantage de pilotes d'imprimantes.",
 		"hardware-support-highlight": "Jouer ? Aucun problème.",
 		"helping-you": "Vous aider à chaque étape.",
-		"helping-you-text": "Aurora intègre des scripts et des utilitaires pour vous aider à démarrer rapidement et configurer vos logiciels favoris."
+		"helping-you-text": "Aurora intègre des scripts et des utilitaires pour vous aider à démarrer rapidement et personnaliser vos logiciels favoris."
 	},
 	"For-Developers": {
 		"title": "Aurora pour les développeurs",
 		"subtitle": "S'appuyant sur des fondations solides, Aurora Developer Experience (DX) est conçu pour faciliter la vie des développeurs en rassemblant les outils et applications les plus courants dans une seule image.",
 		"local-ai": "Workflows IA locaux",
 		"local-ai-text": "Aurora facilite la mise en route de votre IA en intégrant les pilotes GPU et les utilitaires les plus courants.",
-		"local-ai-highlight": "Les robots sont là pour vous servir.",
+		"local-ai-highlight": "L'IA est à votre service.",
 		"containers": "Plateformes de conteneurs préinstallées.",
 		"containers-text": "Aurora Developer Experience intègre Docker et Podman, offrant choix et flexibilité pour les workflows conteneurs les plus exigeants.",
-		"containers-highlight": "Le cloud-native n'a jamais été aussi facile.",
-		"dev-tools": "Des outils de développement disponibles en un clic.",
-		"dev-tools-text": "L'expérience développeur intègre des outils de développement courants tels que VS Code et est préconfigurée pour les workflows de développement DevContainers. Une simple commande et les outils Jetbrains sont prêts.",
+		"containers-highlight": "Le cloud-native n'a jamais été aussi accessible.",
+		"dev-tools": "Des outils de développement disponibles immédiatement.",
+		"dev-tools-text": "Aurora DX intègre des outils de développement courants tels que VS Code et est préconfigurée pour les workflows de développement DevContainers. En une seule commande, les outils Jetbrains sont prêts.",
 		"dev-tools-highlight": "Tout ce dont vous avez besoin, prêt à l'emploi.",
 		"homebrew": "Homebrew prêt à l'emploi",
-		"homebrew-text": "Aurora intègre Homebrew par défaut, facilitant ainsi la découverte, l'installation et la mise à jour de vos outils CLI favoris. Trouvez des milliers de bibliothèques et d'outils dans le catalogue brew. Intégration sûre de brew sans interférence avec votre système hôte.",
+		"homebrew-text": "Aurora intègre Homebrew par défaut, facilitant ainsi la découverte, l'installation et la mise à jour de vos outils CLI favoris. Trouvez des milliers de bibliothèques et d'outils dans le catalogue brew. Brew s'intègre parfaitement en parallèle de votre système hôte.",
 		"homebrew-highlight": "Des outils de développement facilement accessibles."
 	},
 	"Your-New-Desktop": {
