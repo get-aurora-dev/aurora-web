@@ -22,7 +22,7 @@
 		"grab-iso": "Téléchargez l'ISO ici pour une nouvelle installation : ",
 		"yes-option": "Oui",
 		"no-option": "Non",
-		"check-out": "Consultez la",
+		"check-out": "Lisez la",
 		"documentation": "documentation ici.",
 		"title": "Télécharger Aurora",
 		"hardware-config": "Configuration matérielle & Téléchargement",
@@ -44,7 +44,7 @@
 		"image-name-will-be": "Le nom de votre image sera <bold>{name}</bold>.",
 		"slow-download": "Téléchargement lent ?",
 		"check-friends": "Découvrez nos amis chez",
-		"select-hardware-config": "Sélectionnez la configuration matérielle",
+		"select-hardware-config": "Sélectionnez votre configuration matérielle",
 		"choose-gpu": "Choisissez votre GPU ci-dessus pour lancer le téléchargement",
 		"run": "Exécutez"
 	},
