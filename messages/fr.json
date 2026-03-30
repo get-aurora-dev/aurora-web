@@ -193,7 +193,7 @@
 		"app-store-text": "Grâce à la richesse de Flathub, Aurora intègre une logithèque qui simplifie la vie des utilisateurs et des développeurs. Enfin une boutique unique pour publier ses applis et financer le développement de logiciels libres.",
 		"app-store-highlight": "Le futur des applications Linux est là.",
 		"checkout-flathub": "Découvrez Flathub",
-		"extendable": "Facilement auditable et extensible.",
+		"extendable": "Facilement auditable et modifiable.",
 		"extendable-text": "Aurora repose sur des scripts bash, des fichiers conteneurs et des programmes personnalisés. Cette architecture facilite l'audit, les contributions et l'entraide. En facilitant le travail des développeurs, nous espérons encourager les contributions de nouveaux utilisateurs. Rejoignez-nous dans cette aventure.",
 		"extendable-highlight": "La puissance de Docker dans votre ordinateur. Waow."
 	},
