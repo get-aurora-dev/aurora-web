@@ -28,7 +28,7 @@ export default function DownloadAurora({
   return (
     <div
       ref={downloadRef}
-      className="flex min-h-dvh items-center justify-center p-6"
+      className="flex min-h-dvh/50 items-center justify-center p-6"
       id="download"
     >
       <div className="w-full max-w-4xl space-y-10">
