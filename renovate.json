@@ -8,7 +8,8 @@
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
       "automergeType": "pr",
-      "automergeStrategy": "squash"
+      "automergeStrategy": "squash",
+      "minimumReleaseAge": "3 days"
     }
   ]
 }
