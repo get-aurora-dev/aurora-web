@@ -40,7 +40,7 @@ export default function Hero({
 	introRef,
 	aboutRef,
 }: {
-	introRef: RefObject<HTMLDivElement>;
+	introRef: RefObject<HTMLDivElement | null>;
 	aboutRef: RefObject<HTMLDivElement | null>;
 }) {
 	const t = useTranslations("Introduction");
