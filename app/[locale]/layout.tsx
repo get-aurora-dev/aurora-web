@@ -15,7 +15,25 @@ export const metadata: Metadata = {
     "The ultimate productivity workstation, stable and streamlined for you.",
   openGraph: {
     type: "website",
-    images: ["/aurora_wallpaper_september_2025.png"],
+    title: "Aurora - The Linux-based ultimate workstation",
+    description:
+      "The ultimate productivity workstation, stable and streamlined for you.",
+    siteName: "Aurora",
+    images: [
+      {
+        url: "/art/wallpapers/wallpaper-10.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "Luminance - Aurora wallpaper by Chandeleer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aurora - The Linux-based ultimate workstation",
+    description:
+      "The ultimate productivity workstation, stable and streamlined for you.",
+    images: ["/art/wallpapers/wallpaper-10.jpg"],
   },
   icons: {
     icon: "/aurora-logo.svg",
