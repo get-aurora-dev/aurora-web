@@ -1,4 +1,4 @@
-export default function GithubIcon({color = "#000000", size = "30px"}: {color?: string, size?: string}) {
+export default function GithubIcon({color = "#000000", size = 30}: {color?: string, size?: number | string}) {
     return (
         <svg width={size} height={size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
