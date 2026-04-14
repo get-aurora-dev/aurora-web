@@ -58,7 +58,7 @@ export default function Footer({ introRef }: { introRef?: RefObject<any> }) {
             className={"flex flex-row justify-center items-center gap-1"}
             href={"https://github.com/ublue-os/aurora"}
           >
-            <GithubIcon color="#ffffff"/> Aurora GitHub Repository
+            <GithubIcon color="#ffffff" /> Aurora GitHub Repository
           </a>
 
           <a
