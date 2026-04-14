@@ -1,6 +1,7 @@
 import { RefObject } from "react";
-import { CircleArrowUp, GithubIcon, GitMerge, GlobeIcon } from "lucide-react";
+import { CircleArrowUp, GitMerge, GlobeIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
+import GithubIcon from "../GithubIcon";
 
 export default function Footer({ introRef }: { introRef?: RefObject<any> }) {
   const t = useTranslations("Footer");
@@ -54,14 +55,14 @@ export default function Footer({ introRef }: { introRef?: RefObject<any> }) {
           }
         >
           <a
-            className={"flex flex-row gap-1"}
+            className={"flex flex-row justify-center items-center gap-1"}
             href={"https://github.com/ublue-os/aurora"}
           >
-            <GithubIcon /> Aurora GitHub Repository
+            <GithubIcon color="#ffffff"/> Aurora GitHub Repository
           </a>
 
           <a
-            className={"flex flex-row gap-1"}
+            className={"flex flex-row justify-center items-center gap-1"}
             href={"https://universal-blue.org"}
           >
             <GlobeIcon />
@@ -69,7 +70,7 @@ export default function Footer({ introRef }: { introRef?: RefObject<any> }) {
           </a>
 
           <a
-            className={"flex flex-row gap-1"}
+            className={"flex flex-row justify-center items-center gap-1"}
             href={"https://github.com/get-aurora-dev/aurora-web"}
           >
             <GitMerge />
