@@ -1,9 +1,18 @@
-import { RefObject } from "react";
+import { type RefObject } from "react";
 import { CircleArrowUp, GitMerge, GlobeIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import GithubIcon from "../GithubIcon";
 
-export default function Footer({ introRef }: { introRef?: RefObject<any> }) {
+type FooterProps = {
+  introRef?: RefObject<HTMLDivElement | null>;
+};
+
+const externalLinkProps = {
+  target: "_blank",
+  rel: "noreferrer",
+} as const;
+
+export default function Footer({ introRef }: FooterProps) {
   const t = useTranslations("Footer");
 
   const handleScrollUp = () => {
@@ -18,73 +27,106 @@ export default function Footer({ introRef }: { introRef?: RefObject<any> }) {
   };
 
   return (
-    <>
-      <footer
-        className={
-          "flex min-h-[30vh] w-full flex-col items-center justify-center gap-4 bg-gray-800 p-12 text-center text-white lg:p-0"
-        }
+    <footer className="relative z-10 flex min-h-[30vh] w-full flex-col items-center justify-center gap-4 bg-gray-800 p-12 text-center text-white lg:p-0">
+      <button
+        type="button"
+        className="mt-5 flex flex-row items-center justify-center gap-5"
+        onClick={handleScrollUp}
       >
-        <button
-          className={"mt-5 flex flex-row items-center justify-center gap-5"}
-          onClick={handleScrollUp}
-        >
-          <CircleArrowUp className={"h-10 w-10"} />
-          {t("go-up")}
-        </button>
-        <div
-          className={
-            "flex flex-col items-center justify-center gap-2 p-4 text-xl"
-          }
-        >
-          {t("proudly-built")}{" "}
-          <a
-            className={"flex flex-row items-center gap-2 font-bold underline"}
-            href={"https://universal-blue.org"}
-          >
-            <img src={"/ublue-color.svg"} width={35} height={35} />
-            Universal Blue
-          </a>
-          {t("proudly-built-phrase")}
-        </div>
-        <div>{t("built-with-love")}</div>
-        <div>Logos have been crafted by Delphic Melody (@delphicmelody on Discord) and @zandrro. ❤️</div>
-        <div>Wallpapers & other art are made by <a className={"underline"} href={"https://ko-fi.com/chandeleer"} target={"_blank"}>Chandeleer</a> ❤️</div>
-        <div
-          className={
-            "mb-5 flex w-full flex-col items-center justify-center gap-5 underline underline-offset-4 lg:w-fit lg:flex-row"
-          }
-        >
-          <a
-            className={"flex flex-row justify-center items-center gap-1"}
-            href={"https://github.com/ublue-os/aurora"}
-          >
-            <GithubIcon color="#ffffff" /> Aurora GitHub Repository
-          </a>
+        <CircleArrowUp className="h-10 w-10" />
+        {t("go-up")}
+      </button>
 
-          <a
-            className={"flex flex-row justify-center items-center gap-1"}
-            href={"https://universal-blue.org"}
-          >
-            <GlobeIcon />
-            Universal Blue Website
-          </a>
+      <div className="flex flex-col items-center justify-center gap-2 p-4 text-xl">
+        {t("proudly-built")}{" "}
+        <a
+          className="flex flex-row items-center gap-2 font-bold underline"
+          href="https://universal-blue.org"
+          {...externalLinkProps}
+        >
+          <img
+            src="/ublue-color.svg"
+            width={35}
+            height={35}
+            alt="Universal Blue"
+          />
+          Universal Blue
+        </a>
+        {t("proudly-built-phrase")}
+      </div>
 
-          <a
-            className={"flex flex-row justify-center items-center gap-1"}
-            href={"https://github.com/get-aurora-dev/aurora-web"}
-          >
-            <GitMerge />
-            Website Source Code
-          </a>
+      <div>{t("built-with-love")}</div>
+
+      <div>
+        Logos have been crafted by{" "}
+        <a
+          className="underline"
+          href="https://ko-fi.com/melodyofdelphi"
+          {...externalLinkProps}
+        >
+          Delphic Melody
+        </a>{" "}
+        and{" "}
+        <a className="underline" href="https://github.com/zandrro" {...externalLinkProps}>
+          @zandrro
+        </a>
+        . ❤️
+      </div>
+
+      <div>
+        Wallpapers & other art are made by{" "}
+        <a
+          className="underline"
+          href="https://ko-fi.com/chandeleer"
+          {...externalLinkProps}
+        >
+          Chandeleer
+        </a>{" "}
+        ❤️
+      </div>
+
+      <div className="mb-5 flex w-full flex-col items-center justify-center gap-5 underline underline-offset-4 lg:w-fit lg:flex-row">
+        <a
+          className="flex flex-row items-center justify-center gap-1"
+          href="https://github.com/ublue-os/aurora"
+          {...externalLinkProps}
+        >
+          <GithubIcon color="#ffffff" /> Aurora GitHub Repository
+        </a>
+
+        <a
+          className="flex flex-row items-center justify-center gap-1"
+          href="https://universal-blue.org"
+          {...externalLinkProps}
+        >
+          <GlobeIcon />
+          Universal Blue Website
+        </a>
+
+        <a
+          className="flex flex-row items-center justify-center gap-1"
+          href="https://github.com/get-aurora-dev/aurora-web"
+          {...externalLinkProps}
+        >
+          <GitMerge />
+          Website Source Code
+        </a>
+      </div>
+
+      <div className="mb-3 text-sm italic">{t("not-affiliated")}</div>
+
+      <div>
+        <div className="text-xl font-bold italic">
+          Deploying Linux to your machine, please wait...
         </div>
-        <div className={"mb-3 text-sm italic"}>{t("not-affiliated")}</div>
-        <div>
-          <div className={"text-xl font-bold italic"}>
-            Deploying Linux to your machine, please wait...
-          </div>
-          <img className={"scale-50"} src={"/glorp.png"} />
-        </div>
-      </footer>
-    </>
+        <img
+          className="scale-50"
+          src="/glorp.png"
+          width={534}
+          height={534}
+          alt="Glorp mascot"
+        />
+      </div>
+    </footer>
   );
 }
