@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     siteName: "Aurora",
     images: [
       {
-        url: "/art/wallpapers/wallpaper-10.jpg",
+        url: "/art/wallpapers/wallpaper-11.webp",
         width: 1920,
         height: 1080,
-        alt: "Luminance - Aurora wallpaper by Chandeleer",
+        alt: "Aurora wallpaper by Chandeleer",
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Aurora - The Linux-based ultimate workstation",
     description:
       "The ultimate productivity workstation, stable and streamlined for you.",
-    images: ["/art/wallpapers/wallpaper-10.jpg"],
+    images: ["/art/wallpapers/wallpaper-11.webp"],
   },
   icons: {
     icon: "/aurora-logo.svg",

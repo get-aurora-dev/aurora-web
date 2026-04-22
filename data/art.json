@@ -74,7 +74,7 @@
       "title": "Luna",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-2.png",
-      "thumbnail": "/art/wallpapers/wallpaper-2.jpg",
+      "thumbnail": "/art/wallpapers/wallpaper-2.webp",
       "artist": "chandeleer"
     },
     {
@@ -82,7 +82,7 @@
       "title": "Voyage",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-3.png",
-      "thumbnail": "/art/wallpapers/wallpaper-3.jpg",
+      "thumbnail": "/art/wallpapers/wallpaper-3.webp",
       "artist": "chandeleer"
     },
     {
@@ -90,7 +90,7 @@
       "title": "AuroraVerse",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-4.png",
-      "thumbnail": "/art/wallpapers/wallpaper-4.jpg",
+      "thumbnail": "/art/wallpapers/wallpaper-4.webp",
       "artist": "chandeleer"
     },
     {
@@ -98,7 +98,7 @@
       "title": "Globetrotter",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-5.png",
-      "thumbnail": "/art/wallpapers/wallpaper-5.jpg",
+      "thumbnail": "/art/wallpapers/wallpaper-5.webp",
       "artist": "chandeleer"
     },
     {
@@ -106,7 +106,7 @@
       "title": "FallBlues",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-6.png",
-      "thumbnail": "/art/wallpapers/wallpaper-6.jpg",
+      "thumbnail": "/art/wallpapers/wallpaper-6.webp",
       "artist": "chandeleer"
     },
     {
@@ -114,7 +114,7 @@
       "title": "Holiday Blues",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-7.png",
-      "thumbnail": "/art/wallpapers/wallpaper-7.jpg",
+      "thumbnail": "/art/wallpapers/wallpaper-7.webp",
       "artist": "chandeleer"
     },
     {
@@ -122,7 +122,7 @@
       "title": "Coneheads",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-8.png",
-      "thumbnail": "/art/wallpapers/wallpaper-8.jpg",
+      "thumbnail": "/art/wallpapers/wallpaper-8.webp",
       "artist": "chandeleer"
     },
     {
@@ -130,7 +130,7 @@
       "title": "Shangyuan",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-9.png",
-      "thumbnail": "/art/wallpapers/wallpaper-9.jpg",
+      "thumbnail": "/art/wallpapers/wallpaper-9.webp",
       "artist": "chandeleer"
     },
     {
@@ -138,7 +138,14 @@
       "title": "Luminance",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-10.png",
-      "thumbnail": "/art/wallpapers/wallpaper-10.jpg",
+      "thumbnail": "/art/wallpapers/wallpaper-10.webp",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "wallpaper-11",
+      "title": "Wallpaper 11",
+      "category": "wallpapers",
+      "image": "/art/wallpapers/wallpaper-11.png",
       "artist": "chandeleer"
     }
   ]

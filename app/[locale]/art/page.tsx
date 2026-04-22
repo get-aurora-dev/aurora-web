@@ -51,8 +51,18 @@ const getArtworkImages = (artwork: Artwork): string[] => {
 	return [];
 };
 
-const getArtworkPreview = (artwork: Artwork): string | undefined =>
-	artwork.thumbnail || artwork.profilePicture || getArtworkImages(artwork)[0];
+const getWebpSrc = (imagePath: string): string =>
+	imagePath.replace(/\.(png|jpe?g)$/i, ".webp");
+
+const getArtworkDisplayImages = (artwork: Artwork): string[] =>
+	getArtworkImages(artwork).map(getWebpSrc);
+
+const getArtworkPreview = (artwork: Artwork): string | undefined => {
+	const previewSource =
+		artwork.thumbnail || artwork.profilePicture || getArtworkImages(artwork)[0];
+
+	return previewSource ? getWebpSrc(previewSource) : undefined;
+};
 
 function CategoryCarousel({
 	category,
@@ -206,8 +216,15 @@ export default function ArtGalleryPage() {
 	const selectedArtworkImages = selectedArtwork
 		? getArtworkImages(selectedArtwork)
 		: [];
+	const selectedArtworkDisplayImages = selectedArtwork
+		? getArtworkDisplayImages(selectedArtwork)
+		: [];
 
-	const selectedArtworkImage =
+	const selectedArtworkDisplayImage =
+		selectedArtworkDisplayImages[selectedImageIndex] ||
+		(selectedArtwork ? getArtworkPreview(selectedArtwork) : undefined) ||
+		"";
+	const selectedArtworkDownloadImage =
 		selectedArtworkImages[selectedImageIndex] ||
 		selectedArtwork?.image ||
 		selectedArtwork?.thumbnail ||
@@ -439,7 +456,7 @@ export default function ArtGalleryPage() {
 												onClick={(e) => e.stopPropagation()}
 											>
 												<a
-													href={selectedArtworkImage}
+													href={selectedArtworkDownloadImage}
 													download
 													className="flex items-center gap-3 px-4 py-3 text-sm text-white transition-colors hover:bg-zinc-700"
 													onClick={() => setShowDownloadMenu(false)}
@@ -461,7 +478,7 @@ export default function ArtGalleryPage() {
 									</>
 								) : (
 									<a
-										href={selectedArtworkImage}
+										href={selectedArtworkDownloadImage}
 										download
 										onClick={(e) => e.stopPropagation()}
 										className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-xs transition-colors hover:bg-zinc-700"
@@ -529,8 +546,8 @@ export default function ArtGalleryPage() {
 								</>
 							)}
 							<img
-								src={selectedArtworkImage}
-								alt={t(`artworks.${selectedArtwork.id}.title`)}
+								src={selectedArtworkDisplayImage}
+								alt={selectedArtwork.title}
 								className="max-h-[80vh] max-w-[90vw] object-contain"
 								style={{
 									transform: `scale(${zoom}) translate(${position.x / zoom}px, ${position.y / zoom}px)`,
