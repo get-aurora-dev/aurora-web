@@ -8,22 +8,25 @@ import { setRequestLocale } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/config";
 
 const geist = Geist({ subsets: ["latin"] });
+const siteUrl = new URL("https://getaurora.dev");
 
 export const metadata: Metadata = {
+  metadataBase: siteUrl,
   title: "Aurora - The Linux-based ultimate workstation",
   description:
     "The ultimate productivity workstation, stable and streamlined for you.",
   openGraph: {
     type: "website",
+    url: siteUrl,
     title: "Aurora - The Linux-based ultimate workstation",
     description:
       "The ultimate productivity workstation, stable and streamlined for you.",
     siteName: "Aurora",
     images: [
       {
-        url: "/art/wallpapers/wallpaper-11.webp",
-        width: 1920,
-        height: 1080,
+        url: "/art/wallpapers/wallpaper-11.png",
+        width: 3840,
+        height: 2160,
         alt: "Aurora wallpaper by Chandeleer",
       },
     ],
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
     title: "Aurora - The Linux-based ultimate workstation",
     description:
       "The ultimate productivity workstation, stable and streamlined for you.",
-    images: ["/art/wallpapers/wallpaper-11.webp"],
+    images: ["/art/wallpapers/wallpaper-11.png"],
   },
   icons: {
     icon: "/aurora-logo.svg",
