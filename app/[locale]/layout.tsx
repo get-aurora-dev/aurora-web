@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: "/art/wallpapers/wallpaper-11.png",
         width: 3840,
         height: 2160,
-        alt: "Aurora wallpaper by Chandeleer",
+        alt: "Skywrecker - Aurora wallpaper by Chandeleer",
       },
     ],
   },
