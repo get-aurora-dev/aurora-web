@@ -140,6 +140,13 @@
       "image": "/art/wallpapers/wallpaper-10.png",
       "thumbnail": "/art/wallpapers/wallpaper-10.jpg",
       "artist": "chandeleer"
+    },
+    {
+      "id": "wallpaper-11",
+      "title": "Wallpaper 11",
+      "category": "wallpapers",
+      "image": "/art/wallpapers/wallpaper-11.png",
+      "artist": "chandeleer"
     }
   ]
 }
