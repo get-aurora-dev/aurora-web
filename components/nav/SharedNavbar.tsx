@@ -24,6 +24,7 @@ const SharedNavbar = ({ variant = "page", onScrollTo }: SharedNavbarProps) => {
     const handleScroll = () => {
       setIsTop(window.scrollY <= 100);
     };
+    handleScroll();
     document.addEventListener("scroll", handleScroll);
     return () => document.removeEventListener("scroll", handleScroll);
   }, []);
