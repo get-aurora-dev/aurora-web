@@ -6,6 +6,7 @@ import { DiscourseScript } from "./discourse-script";
 import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/config";
+import Footer from "@/components/footer/Footer";
 
 const geist = Geist({ subsets: ["latin"] });
 const siteUrl = new URL("https://getaurora.dev");
@@ -72,6 +73,7 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

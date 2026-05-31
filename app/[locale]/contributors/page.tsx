@@ -25,7 +25,6 @@ import contributorsData from "@/data/contributors.json";
 import contributorsCache from "@/data/contributors-cache.json";
 import { StarsBackground } from "@/components/ui/stars-background";
 import SharedNavbar from "@/components/nav/SharedNavbar";
-import Footer from "@/components/footer/Footer";
 
 type GitHubContributor = {
   login: string;
@@ -396,7 +395,6 @@ export default function ContributorsPage() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }

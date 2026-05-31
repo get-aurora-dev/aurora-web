@@ -20,7 +20,6 @@ import {
 import { AnimatePresence, motion } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
 import SharedNavbar from "@/components/nav/SharedNavbar";
-import Footer from "@/components/footer/Footer";
 import { StarsBackground } from "@/components/ui/stars-background";
 import artData from "@/data/art.json";
 
@@ -599,7 +598,6 @@ export default function ArtGalleryPage() {
 				)}
 			</AnimatePresence>
 
-			<Footer />
 		</div>
 	);
 }

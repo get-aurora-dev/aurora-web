@@ -1,20 +1,14 @@
-import { RefObject } from "react";
+"use client";
+
 import { CircleArrowUp, GitMerge, GlobeIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import GithubIcon from "../GithubIcon";
 
-export default function Footer({ introRef }: { introRef?: RefObject<any> }) {
+export default function Footer() {
   const t = useTranslations("Footer");
 
   const handleScrollUp = () => {
-    if (introRef?.current) {
-      introRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
