@@ -7,7 +7,7 @@ import { useHotkeySequence } from "@tanstack/react-hotkeys";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
-import { type RefObject, useMemo, useState } from "react";
+import { type RefObject, useEffect, useState } from "react";
 import BlurText from "../BlurText";
 
 const LOGO_DEFAULT = "/aurora-text-logo.svg";
@@ -46,7 +46,10 @@ export default function Hero({
 	const t = useTranslations("Introduction");
 	const router = useRouter();
 	const [manualLogo, setManualLogo] = useState<HeroLogo | null>(null);
-	const isJune = useMemo(() => new Date().getMonth() === 5, []);
+	const [isJune, setIsJune] = useState(false);
+	useEffect(() => {
+		setIsJune(new Date().getMonth() === 5);
+	}, []);
 	const seasonalLogo = isJune ? LOGO_PRIDE : LOGO_DEFAULT;
 	const activeLogo = manualLogo ?? seasonalLogo;
 
