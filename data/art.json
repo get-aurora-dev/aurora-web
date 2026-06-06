@@ -1,10 +1,5 @@
 {
   "artists": {
-    "chandeleer": {
-      "username": "chandeleer1698",
-      "displayName": "Chandeleer",
-      "sponsorLink": "https://ko-fi.com/chandeleer"
-    },
     "delphicmelody": {
       "username": "delphicmelody",
       "displayName": "Delphic Melody",
@@ -18,8 +13,7 @@
       "pronouns": "They/Them",
       "category": "characters",
       "images": ["/art/characters/echo.png"],
-      "profilePicture": "/art/profile_pictures/echo.png",
-      "artist": "chandeleer"
+      "profilePicture": "/art/profile_pictures/echo.png"
     },
     {
       "id": "char-lumina",
@@ -27,8 +21,7 @@
       "pronouns": "She/Her",
       "category": "characters",
       "images": ["/art/characters/lumina.png"],
-      "profilePicture": "/art/profile_pictures/lumina.png",
-      "artist": "chandeleer"
+      "profilePicture": "/art/profile_pictures/lumina.png"
     },
     {
       "id": "char-phlip",
@@ -36,8 +29,7 @@
       "pronouns": "He/Him",
       "category": "characters",
       "images": ["/art/characters/phlip.png"],
-      "profilePicture": "/art/profile_pictures/phlip.png",
-      "artist": "chandeleer"
+      "profilePicture": "/art/profile_pictures/phlip.png"
     },
     {
       "id": "char-scope",
@@ -48,8 +40,7 @@
         "/art/characters/scope.png",
         "/art/characters/scope_from_the_front.png"
       ],
-      "profilePicture": "/art/profile_pictures/scope.png",
-      "artist": "chandeleer"
+      "profilePicture": "/art/profile_pictures/scope.png"
     },
     {
       "id": "char-tina",
@@ -57,8 +48,7 @@
       "pronouns": "She/Her",
       "category": "characters",
       "images": ["/art/characters/tina.png"],
-      "profilePicture": "/art/profile_pictures/tina.png",
-      "artist": "chandeleer"
+      "profilePicture": "/art/profile_pictures/tina.png"
     },
     {
       "id": "char-vincent",
@@ -66,87 +56,76 @@
       "pronouns": "He/Him",
       "category": "characters",
       "images": ["/art/characters/vincent.png"],
-      "profilePicture": "/art/profile_pictures/vincent.webp",
-      "artist": "chandeleer"
+      "profilePicture": "/art/profile_pictures/vincent.webp"
     },
     {
       "id": "wallpaper-2",
       "title": "Luna",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-2.png",
-      "thumbnail": "/art/wallpapers/wallpaper-2.webp",
-      "artist": "chandeleer"
+      "thumbnail": "/art/wallpapers/wallpaper-2.webp"
     },
     {
       "id": "wallpaper-3",
       "title": "Voyage",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-3.png",
-      "thumbnail": "/art/wallpapers/wallpaper-3.webp",
-      "artist": "chandeleer"
+      "thumbnail": "/art/wallpapers/wallpaper-3.webp"
     },
     {
       "id": "wallpaper-4",
       "title": "AuroraVerse",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-4.png",
-      "thumbnail": "/art/wallpapers/wallpaper-4.webp",
-      "artist": "chandeleer"
+      "thumbnail": "/art/wallpapers/wallpaper-4.webp"
     },
     {
       "id": "wallpaper-5",
       "title": "Globetrotter",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-5.png",
-      "thumbnail": "/art/wallpapers/wallpaper-5.webp",
-      "artist": "chandeleer"
+      "thumbnail": "/art/wallpapers/wallpaper-5.webp"
     },
     {
       "id": "wallpaper-6",
       "title": "FallBlues",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-6.png",
-      "thumbnail": "/art/wallpapers/wallpaper-6.webp",
-      "artist": "chandeleer"
+      "thumbnail": "/art/wallpapers/wallpaper-6.webp"
     },
     {
       "id": "wallpaper-7",
       "title": "Holiday Blues",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-7.png",
-      "thumbnail": "/art/wallpapers/wallpaper-7.webp",
-      "artist": "chandeleer"
+      "thumbnail": "/art/wallpapers/wallpaper-7.webp"
     },
     {
       "id": "wallpaper-8",
       "title": "Coneheads",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-8.png",
-      "thumbnail": "/art/wallpapers/wallpaper-8.webp",
-      "artist": "chandeleer"
+      "thumbnail": "/art/wallpapers/wallpaper-8.webp"
     },
     {
       "id": "wallpaper-9",
       "title": "Shangyuan",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-9.png",
-      "thumbnail": "/art/wallpapers/wallpaper-9.webp",
-      "artist": "chandeleer"
+      "thumbnail": "/art/wallpapers/wallpaper-9.webp"
     },
     {
       "id": "wallpaper-10",
       "title": "Luminance",
       "category": "wallpapers",
       "image": "/art/wallpapers/wallpaper-10.png",
-      "thumbnail": "/art/wallpapers/wallpaper-10.webp",
-      "artist": "chandeleer"
+      "thumbnail": "/art/wallpapers/wallpaper-10.webp"
     },
     {
       "id": "wallpaper-11",
       "title": "Skywrecker",
       "category": "wallpapers",
-      "image": "/art/wallpapers/wallpaper-11.png",
-      "artist": "chandeleer"
+      "image": "/art/wallpapers/wallpaper-11.png"
     }
   ]
 }

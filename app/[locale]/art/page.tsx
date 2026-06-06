@@ -32,7 +32,7 @@ type Artwork = {
 	images?: string[];
 	thumbnail?: string;
 	profilePicture?: string;
-	artist: string;
+	artist?: string;
 };
 
 type Artist = {
@@ -192,7 +192,8 @@ export default function ArtGalleryPage() {
 		return category === "wallpapers" ? artworks.reverse() : artworks;
 	};
 
-	const getArtist = (artistKey: string): Artist => {
+	const getArtist = (artistKey?: string): Artist | undefined => {
+		if (!artistKey) return undefined;
 		return artData.artists[artistKey as keyof typeof artData.artists];
 	};
 
@@ -572,26 +573,32 @@ export default function ArtGalleryPage() {
 										</span>
 									)}
 								</h2>
-								<div className="flex flex-wrap items-center gap-4">
-									<div className="flex items-center gap-2">
-										<span className="text-sm text-zinc-500">
-											{t("by-artist")}
-										</span>
-										<span className="font-medium text-white">
-											{getArtist(selectedArtwork.artist).displayName}
-										</span>
-									</div>
-									<a
-										href={getArtist(selectedArtwork.artist).sponsorLink}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="flex items-center gap-2 rounded-full bg-pink-500/20 px-4 py-2 text-sm font-medium text-pink-400 transition-colors hover:bg-pink-500/30"
-									>
-										<Heart className="h-4 w-4" />
-										{t("sponsor-artist")}
-										<ExternalLink className="h-3 w-3" />
-									</a>
-								</div>
+								{(() => {
+									const artist = getArtist(selectedArtwork.artist);
+									if (!artist) return null;
+									return (
+										<div className="flex flex-wrap items-center gap-4">
+											<div className="flex items-center gap-2">
+												<span className="text-sm text-zinc-500">
+													{t("by-artist")}
+												</span>
+												<span className="font-medium text-white">
+													{artist.displayName}
+												</span>
+											</div>
+											<a
+												href={artist.sponsorLink}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="flex items-center gap-2 rounded-full bg-pink-500/20 px-4 py-2 text-sm font-medium text-pink-400 transition-colors hover:bg-pink-500/30"
+											>
+												<Heart className="h-4 w-4" />
+												{t("sponsor-artist")}
+												<ExternalLink className="h-3 w-3" />
+											</a>
+										</div>
+									);
+								})()}
 							</div>
 						</motion.div>
 					</motion.div>

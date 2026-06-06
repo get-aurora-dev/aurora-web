@@ -42,7 +42,6 @@ export default function Footer() {
         </div>
         <div>{t("built-with-love")}</div>
         <div>Logos have been crafted by Delphic Melody (@delphicmelody on Discord) and @zandrro. ❤️</div>
-        <div>Wallpapers & other art are made by <a className={"underline"} href={"https://ko-fi.com/chandeleer"} target={"_blank"}>Chandeleer</a> ❤️</div>
         <div
           className={
             "mb-5 flex w-full flex-col items-center justify-center gap-5 underline underline-offset-4 lg:w-fit lg:flex-row"
