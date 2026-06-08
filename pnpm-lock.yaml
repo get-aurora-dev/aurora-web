@@ -55,8 +55,8 @@ importers:
         specifier: 4.3.0
         version: 4.3.0
       '@types/node':
-        specifier: 24.13.0
-        version: 24.13.0
+        specifier: 24.13.1
+        version: 24.13.1
       '@types/react':
         specifier: 19.2.16
         version: 19.2.16
@@ -1126,8 +1126,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@24.13.0':
-    resolution: {integrity: sha512-5vtOqGQr4NJKeEzV441FcOi2MeG9UTWq9LqVLGneDdu4vlX17H8kQ2PA2UmNwCUGPVDj4oBjNhS7ReVEIWJJrg==}
+  '@types/node@24.13.1':
+    resolution: {integrity: sha512-RSpUJGmvsJ1ZeBehQZFhIdpsz+bIpES0nIQXko4Ybq+N+kX6XvOq3Jo+iJ82FWLdblFq85AsMikd3m35jgezYg==}
 
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
@@ -3594,7 +3594,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@24.13.0':
+  '@types/node@24.13.1':
     dependencies:
       undici-types: 7.18.2
 
