@@ -2,7 +2,7 @@
 	"Navbar": {
 		"end-user": "Sobre Aurora",
 		"developer": "Para Desarrolladores",
-		"faq": "FAQ",
+		"faq": "Preguntas Frecuentes",
 		"news": "Noticias",
 		"contributors": "Contribuidores",
 		"art": "Galería de Arte",
@@ -50,7 +50,7 @@
 	},
 	"Introduction": {
 		"title": "Aurora,",
-		"stargazer": "Hola. miraestrellas. Aurora te espera.",
+		"stargazer": "Hola, miraestrellas. Aurora te espera.",
 		"powered": "Hecho con la genialidad de KDE y Universal Blue, para ti.",
 		"onboard": "Súbete a la nave de tu nuevo sistema operativo.",
 		"gaze": " Miremos a las estrellas juntos, compañero.",
@@ -62,7 +62,7 @@
 		"loop-3": "Mira vídeos.",
 		"loop-4": "Dibuja tu siguiente póster de película.",
 		"loop-5": "Divide un átomo de helio.",
-		"loop-6": "Sueña sobre las estrellas.",
+		"loop-6": "Sueña con las estrellas.",
 		"loop-7": "Juega y trabaja duro.",
 		"loop-8": "Crea la siguiente nave."
 	},
@@ -84,7 +84,7 @@
 	},
 	"About-AuroraDx": {
 		"for-developers": "Aurora para desarrolladores",
-		"pro-stargazing": "Eres bueno mirando estrellas? La edición desarollador toma la fundación y la sube al máximo.",
+		"pro-stargazing": "¿Eres bueno mirando estrellas? La edición desarollador toma la fundación y la sube al máximo.",
 		"brew-ready": "Brew, listo para lo que necesites.",
 		"brew-ready-text": "Brew está preinstalado y listo para usar en Aurora. Úsalo para instalar cada programa CLI que se te ocurra! Brew está integrado para nunca molestar en tu sistema.",
 		"brew-ready-red": "La cerveza nunca fue tan rica.",
@@ -100,7 +100,7 @@
 	},
 	"Build-Your-Own": {
 		"build-your-own": "Crea tu propia Aurora",
-		"want-to-build": "Quieres crear tu propia imagen? O extender Aurora con tus propios temas? Para empezar, usa la plantilla de imagen. Solamente necesitas conocimiento de contenedorización usando Docker, y solo un poquito de tiempo. ¡Vamos arriba!",
+		"want-to-build": "¿Quieres crear tu propia imagen? O extender Aurora con tus propios temas? Para empezar, usa la plantilla de imagen. Solamente necesitas conocimiento de contenedorización usando Docker, y solo un poquito de tiempo. ¡Vamos arriba!",
 		"get-image-template": "Conseguir la plantilla"
 	},
 	"Footer": {
