@@ -119,7 +119,7 @@
 	"FAQ": {
 		"faq-title": "Preguntas frecuentes",
 		"faq-intro": "¿Quieres más detalles? Aquí, las respuestas para las mayores preguntas.",
-		"click-here": "¡Clickea aquí!",
+		"click-here": "¡Cliquea aquí!",
 		"questions": {
 			"q1": {
 				"question": "¿Puedo tener GNOME en eso?",
@@ -128,7 +128,7 @@
 			},
 			"q2": {
 				"question": "¿Qué es Aurora Developer Edition? (Aurora-DX)?",
-				"answer": "Aurora Developer Edition es una edición especial, que trae paquetes para desarrolladores que los necesiten. Incluye VS Code preinstalado con capacidades DevContainer, Docker y Podman como entornos de contenedores, herramientas para usar máquinas virtuales, herramientas para crear un ambiente contenerizado con DevPod y más. La experiencia desarrollador también incluye herramentas para desarrolladores de cloud-native. ¡Y siempre puedes instalas más con Brew! Si quieres una lista de todos los paquetes, clickea el link.",
+				"answer": "Aurora Developer Edition es una edición especial, que trae paquetes para desarrolladores que los necesiten. Incluye VS Code preinstalado con capacidades DevContainer, Docker y Podman como entornos de contenedores, herramientas para usar máquinas virtuales, herramientas para crear un ambiente contenerizado con DevPod y más. La experiencia desarrollador también incluye herramentas para desarrolladores de cloud-native. ¡Y siempre puedes instalas más con Brew! Si quieres una lista de todos los paquetes, cliquea el link.",
 				"optionalLink": "https://github.com/ublue-os/bluefin/blob/main/packages.json"
 			},
 			"q3": {
@@ -164,7 +164,7 @@
 		"containers": "Herramientas de contenedor preinstaladas.",
 		"containers-text": "Aurora Developer Experience incluye Docker y Podman, para flexibilidad en los trabajos contenedor que más demandan.",
 		"containers-highlight": "Cloud-Native nunca ha sido tan fácil.",
-		"dev-tools": "Las herramientas de desarrollador están a solo un click.",
+		"dev-tools": "Las herramientas de desarrollador están a solo un clic.",
 		"dev-tools-text": "La experiencia desarrollador incluye herramientas comunes como VS Code, y viene configurada para desarrollo contenerizado con DevContainers. Productos Jetbrains están a solo un comando.",
 		"dev-tools-highlight": "Todo lo que necesitas, lo trae.",
 		"homebrew": "Con Homebrew",
