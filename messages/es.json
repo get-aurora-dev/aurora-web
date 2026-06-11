@@ -208,47 +208,47 @@
 	},
 	"Stats-Section": {
 		"title": "Estadísticas del proyecto",
-		"previous-slide": "Previous stats slide",
-		"next-slide": "Next stats slide",
-		"go-to-slide": "Go to {title}",
+		"previous-slide": "Diapositiva de las previas estadísticas",
+		"next-slide": "Siguiente diapositiva de estadísticas",
+		"go-to-slide": "Ir a {title}",
 		"slides": {
 			"countme": {
-				"title": "Aurora Growth (countme)",
-				"alt": "Aurora growth chart from countme",
-				"powered-by-label": "Powered by countme"
+				"title": "Crecimiento de Aurora (countme)",
+				"alt": "Gráfico de crecimiento de Aurora, desde countme",
+				"powered-by-label": "Impulsado por countme"
 			},
 			"star-history": {
-				"title": "Star History",
-				"alt": "Star History chart for ublue-os/aurora"
+				"title": "Historia de estrellas",
+				"alt": "Gráfico de historia de estrellas en ublue-os/aurora"
 			}
 		}
 	},
 	"Language": {
-		"select": "Language",
+		"select": "Idioma",
 		"en": "English",
 		"de": "Deutsch"
 	},
 	"News": {
-		"title": "News",
-		"latest-from-blog": "Latest from the Blog",
-		"loading": "Loading blog posts...",
-		"failed-to-load": "Failed to load blog posts",
-		"no-posts": "No blog posts available",
-		"view-all": "View all blog posts"
+		"title": "Noticias",
+		"latest-from-blog": "Novedades del blog",
+		"loading": "Cargando publicaciones del blog...",
+		"failed-to-load": "No se pudo cargar las publicaciones del blog",
+		"no-posts": "No hay publicaciones del blog disponibles",
+		"view-all": "Ver todas las publicaciones del blog"
 	},
 	"Docs-Community": {
-		"title": "Documentation & Community",
-		"subtitle": "If you want to consult our documentation, contribute to it or need help / want to hang out in our community, you will find it here. We have forums and a Discord server.",
-		"docs-title": "Our documentation",
-		"docs-text": "Get help by reading the docs, or contribute to them if you want to improve them.",
-		"docs-highlight": "Knowledge at your fingertips.",
-		"contribute-docs": "Contribute to Docs",
-		"read-docs": "Read Documentation",
-		"community-title": "Community",
-		"community-text": "We have forums for you to ask questions and discuss technical topics, or join our Discord server to hang out and chat with fellow Aurora users and developers.",
-		"community-highlight": "Join the conversation.",
-		"visit-forums": "Visit Forums",
-		"join-discord": "Join Discord"
+		"title": "Documentación y Comunidad",
+		"subtitle": "Si quieres consultar nuestra documentation o contribuir a ella, o simplemente estar en la comunidad, encontrarás todo aquí. Tenemos foros y un servidor de Discord.",
+		"docs-title": "Nuestra documentación",
+		"docs-text": "Consigue ayuda, leyendo la documentación, o contribuye a ella si quieres mejorarla.",
+		"docs-highlight": "El conocimiento a tu alcance.",
+		"contribute-docs": "Contribuye a la documentación",
+		"read-docs": "Leer documentación",
+		"community-title": "Comunidad",
+		"community-text": "Tenemos foros para que hagas preguntas y discutir temas técnicos, o únete a nuestro servidor de Discord para hablar con otros usuarios y desarrolladores de Aurora.",
+		"community-highlight": "Únete a la conversación.",
+		"visit-forums": "Visitar foros",
+		"join-discord": "Unirse al Discord"
 	},
 	"Contributors-Page": {
 		"title": "Our Contributors",
