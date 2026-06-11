@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/footer/Footer";
 import SharedNavbar from "@/components/nav/SharedNavbar";
 import AboutAuroraNew from "@/components/sections/about/about-aurora-new";
 import Hero from "@/components/sections/hero";
@@ -36,7 +35,6 @@ export default function Home() {
 					newsRef={newsRef}
 				/>
 				<StatsSection />
-				<Footer introRef={introRef} />
 			</main>
 		</div>
 	);

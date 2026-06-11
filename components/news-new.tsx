@@ -18,7 +18,7 @@ async function getRecentBlogPosts() {
 export default function NewsFromBlog({
   newsRef,
 }: {
-  newsRef: React.RefObject<HTMLDivElement>;
+  newsRef: React.RefObject<HTMLDivElement | null>;
 }) {
   const t = useTranslations("News");
   const recentPostsPromise = useMemo(getRecentBlogPosts, []);
@@ -56,7 +56,7 @@ function NewsFromBlogInnerComponent({
   newsRef,
   recentPostsPromise
 }: {
-  newsRef: React.RefObject<HTMLDivElement>;
+  newsRef: React.RefObject<HTMLDivElement | null>;
   recentPostsPromise: ReturnType<typeof getRecentBlogPosts>;
 }) {
   const t = useTranslations("News");

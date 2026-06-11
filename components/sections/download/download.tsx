@@ -3,235 +3,233 @@
 import {
   ArrowUpRight,
   CloudDownload,
-  Monitor,
-  Package,
+  ShieldCheck,
   Cpu,
   Info,
+  CheckCircle2,
+  ChevronRight,
+  HardDriveDownload,
 } from "lucide-react";
 import { RefObject, useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { useTranslations } from "next-intl";
 import { getImageName } from "@/lib/utils/download";
-import SpotlightCard from "@/components/SpotlightCard";
+
+type GPU = "mesa" | "nvidia" | "";
 
 export default function DownloadAurora({
   downloadRef,
 }: {
   downloadRef: RefObject<any>;
 }) {
-  const [primaryGPU, setPrimaryGPU] = useState("");
-  const [developerVersion, setDeveloperVersion] = useState("");
-  const [isHWE, setIsHWE] = useState("no");
-  const imageName = getImageName(isHWE === "yes", primaryGPU, developerVersion);
-  console.log(imageName);
+  const [primaryGPU, setPrimaryGPU] = useState<GPU>("");
+  const imageName = getImageName(false, primaryGPU, "");
   const t = useTranslations("Download-Component");
 
   return (
     <div
       ref={downloadRef}
-      className="flex min-h-dvh items-center justify-center p-6"
-      id={"download"}
+      className="flex min-h-dvh/50 items-center justify-center p-6"
+      id="download"
     >
-      <div className="w-full max-w-6xl space-y-12">
+      <div className="w-full max-w-4xl space-y-10">
         {/* Header */}
         <div className="text-center">
-          <h1 className="bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text py-2 text-4xl font-bold text-transparent lg:text-7xl">
+          <h1 className="bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text py-2 text-4xl font-bold text-transparent lg:text-6xl">
             {t("title")}
           </h1>
+          <p className="mt-3 text-lg text-zinc-400">{t("gpu-description")}</p>
         </div>
 
-        {/* Unified Download Card */}
-        <SpotlightCard
-          className="border-zinc-500/40 bg-black/20 text-white backdrop-blur-md"
-          spotlightColor={`rgba(102, 185, 242, 0.2)`} // aurora-blue
-        >
+        <div className="rounded-xl border border-zinc-700/50 bg-zinc-950/60 p-8 text-white backdrop-blur-md">
           <div className="space-y-8">
-            {/* Hardware Configuration Section - Full Width */}
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <Cpu size={48} className="shrink-0 text-aurora-blue" />
-                <h2 className="bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent">
-                  {t("hardware-config")}
-                </h2>
+            {/* Step 1 — GPU Selection */}
+            <div className="space-y-4">
+              <StepLabel number={1} done={!!primaryGPU} label={t("primary-gpu")} />
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <GPUCard
+                  selected={primaryGPU === "mesa"}
+                  onClick={() => setPrimaryGPU("mesa")}
+                  title={t("intel-amd")}
+                />
+                <GPUCard
+                  selected={primaryGPU === "nvidia"}
+                  onClick={() => setPrimaryGPU("nvidia")}
+                  title={t("nvidia")}
+                />
               </div>
+            </div>
 
-              <div className="space-y-6">
-                <p className="text-xl leading-relaxed">
-                  {t("gpu-description")}
-                </p>
+            <div className="space-y-4">
+              <StepLabel
+                number={2}
+                done={false}
+                label={primaryGPU ? t("ready-to-download") : t("select-hardware-config")}
+                muted={!primaryGPU}
+              />
 
+              {primaryGPU ? (
                 <div className="space-y-4">
-                  <p className="text-lg font-medium text-white">
-                    {t("primary-gpu")}
-                  </p>
-                  <Select onValueChange={setPrimaryGPU}>
-                    <SelectTrigger className="h-14 w-full border-zinc-600 bg-zinc-900/50 text-white backdrop-blur-xs transition-colors hover:bg-zinc-900/70">
-                      <SelectValue
-                        placeholder={
-                          <div className="flex items-center gap-2">
-                            <Monitor className="h-5 w-5 stroke-zinc-400" />
-                            <span className="text-zinc-400">
-                              {t("pick-gpu")}
-                            </span>
-                          </div>
-                        }
-                      />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="mesa">{t("intel-amd")}</SelectItem>
-                      <SelectItem value="nvidia">{t("nvidia")}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </div>
-
-            {/* Installation Guide - More Friendly */}
-            <div className="space-y-4 rounded-2xl border border-aurora-blue/20 bg-aurora-blue/5 p-6">
-              <div className="flex items-center gap-3">
-                <Info className="h-5 w-5 shrink-0 text-aurora-blue" />
-                <h4 className="text-lg font-semibold text-aurora-blue">
-                  {t("installation-guide")}
-                </h4>
-              </div>
-
-              <div className="space-y-3 text-lg">
-                <p className="text-zinc-200">
-                  {t("recommend-using")}{" "}
-                  <a
-                    className="inline-flex items-center gap-1 font-semibold text-aurora-lightorange underline underline-offset-2 transition-colors hover:text-aurora-orangina"
-                    href="https://fedoraproject.org/workstation/download"
-                  >
-                    {t("fedora-image-writer")}{" "}
-                    <ArrowUpRight className="h-4 w-4" />
-                  </a>{" "}
-                  {t("create-usb")}
-                </p>
-
-                <div className="rounded-xl border border-blue-500/20 bg-blue-500/10 p-3">
-                  <p className="text-sm text-blue-200">
-                    <span className="font-medium">{t("note")}</span>{" "}
-                    {t("ventoy-not-supported")}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Download Section */}
-            {primaryGPU ? (
-              <div className="space-y-6 border-t border-zinc-700/50 pt-8">
-                <div className="text-center">
-                  <h3 className="bg-linear-to-r from-aurora-darkblue to-aurora-purple bg-clip-text text-2xl font-bold text-transparent lg:text-3xl">
-                    {t("ready-to-download")}
-                  </h3>
-                  <p className="mt-2 text-lg text-zinc-300">
-                    {t("personalized-image")}{" "}
-                    <code className="font-mono text-aurora-blue">
-                      {imageName}
-                    </code>
-                  </p>
-                </div>
-
-                <DownloadButtons imageName={imageName} isHelium={true} />
-
-                <div className="grid gap-6 lg:grid-cols-2">
-                  <div className="space-y-3 rounded-2xl border border-zinc-700/50 bg-zinc-900/30 p-6">
-                    <h4 className="text-lg font-semibold text-aurora-blue">
-                      {t("developer-mode")}
-                    </h4>
+                  
+{/* Installation note */}
+                  <div className="flex items-start gap-3 rounded-xl border border-aurora-blue/20 bg-aurora-blue/5 px-4 py-3">
+                    <Info className="mt-0.5 h-4 w-4 shrink-0 text-aurora-blue" />
                     <p className="text-sm text-zinc-300">
+                      {t("recommend-using")}{" "}
+                      <a
+                        className="inline-flex items-center gap-0.5 font-semibold text-aurora-blue underline underline-offset-2 transition-colors hover:text-white"
+                        href="https://fedoraproject.org/workstation/download"
+                      >
+                        {t("fedora-image-writer")}
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </a>{" "}
+                      {t("create-usb")}{" "}
+                      <span className="text-zinc-500">
+                        {t("note")} {t("ventoy-not-supported")}
+                      </span>
+                    </p>
+                  </div>
+                  {/* Download Buttons */}
+                  <DownloadButtons imageName={imageName} />
+
+                  
+
+                  {/* Extra Info */}
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <InfoPanel title={t("developer-mode")}>
                       {t("run")}{" "}
-                      <code className="rounded bg-zinc-800 px-2 py-1 font-mono text-aurora-blue">
+                      <code className="rounded bg-zinc-800 px-1.5 py-0.5 font-mono text-xs text-aurora-blue">
                         ujust devmode
                       </code>{" "}
                       {t("run-after-install")}{" "}
                       <a
                         href="https://docs.getaurora.dev/dx/aurora-dx-intro"
-                        className="text-aurora-blue underline underline-offset-2 hover:text-aurora-lightorange"
+                        className="text-aurora-blue underline underline-offset-2 hover:text-white"
                       >
                         {t("learn-more")}
                       </a>
-                    </p>
-                  </div>
+                    </InfoPanel>
 
-                  <div className="space-y-3 rounded-2xl border border-zinc-700/50 bg-zinc-900/30 p-6">
-                    <h4 className="text-lg font-semibold text-aurora-orangina">
-                      {t("rebasing")}
-                    </h4>
-                    <p className="text-sm text-zinc-300">
+                    <InfoPanel title={t("rebasing")}>
                       {t.rich("image-name-will-be", {
                         name: imageName.replace("-stable", ":stable"),
                         bold: (chunks) => (
-                          <strong className="font-bold text-white">
-                            {chunks}
-                          </strong>
+                          <strong className="font-semibold text-white">{chunks}</strong>
                         ),
-                      })}{" "}
-                    </p>
+                      })}
+                    </InfoPanel>
                   </div>
                 </div>
-              </div>
-            ) : (
-              <div className="border-t border-zinc-700/50 pt-8">
-                <div className="flex flex-col items-center justify-center space-y-4 py-12 text-center">
-                  <Monitor className="h-12 w-12 text-zinc-400" />
-                  <div>
-                    <h3 className="mb-2 text-xl font-semibold text-zinc-300">
-                      {t("select-hardware-config")}
-                    </h3>
-                    <p className="text-lg text-zinc-400">{t("choose-gpu")}</p>
-                  </div>
+              ) : (
+                <div className="flex items-center justify-center gap-2 rounded-xl border border-dashed border-zinc-700/50 py-8 text-zinc-500">
+                  <ChevronRight className="h-4 w-4" />
+                  <span className="text-sm">{t("choose-gpu")}</span>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
-        </SpotlightCard>
+        </div>
       </div>
     </div>
   );
 }
 
-function DownloadButtons({
-  imageName,
-  isHelium,
-  isx86 = true,
+function StepLabel({
+  number,
+  done,
+  label,
+  muted = false,
 }: {
-  imageName: string;
-  isHelium: boolean;
-  isx86?: boolean;
+  number: number;
+  done: boolean;
+  label: string;
+  muted?: boolean;
 }) {
-  const downloadLink: string = `https://dl.getaurora.dev/${imageName}-webui-x86_64.iso`;
-  const checksumLink: string = `https://dl.getaurora.dev/${imageName}-webui-x86_64.iso-CHECKSUM`;
+  return (
+    <div className={`flex items-center gap-3 ${muted ? "opacity-40" : ""}`}>
+      <span
+        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors ${
+          done
+            ? "bg-aurora-blue text-zinc-950"
+            : "border border-zinc-600 text-zinc-400"
+        }`}
+      >
+        {done ? <CheckCircle2 className="h-4 w-4" /> : number}
+      </span>
+      <h2 className="text-base font-semibold text-zinc-100">{label}</h2>
+    </div>
+  );
+}
+
+function GPUCard({
+  selected,
+  onClick,
+  title,
+}: {
+  selected: boolean;
+  onClick: () => void;
+  title: string;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`group relative flex w-full items-center gap-4 rounded-2xl border p-5 text-left transition-all duration-200 ${
+        selected
+          ? "border-aurora-blue/60 bg-aurora-blue/10 shadow-lg shadow-aurora-blue/10"
+          : "border-zinc-700/50 bg-zinc-900/30 hover:border-zinc-600 hover:bg-zinc-900/50"
+      }`}
+    >
+      <span
+        className={`h-3 w-3 shrink-0 rounded-full transition-colors ${
+          selected ? "bg-aurora-blue" : "bg-zinc-600 group-hover:bg-zinc-400"
+        }`}
+      />
+      <div>
+        <p className="font-semibold text-white">{title}</p>
+      </div>
+      {selected && (
+        <CheckCircle2 className="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-aurora-blue" />
+      )}
+    </button>
+  );
+}
+
+function InfoPanel({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="rounded-xl border border-zinc-700/40 bg-zinc-900/30 p-4">
+      <p className="mb-1.5 text-sm font-semibold text-zinc-300">{title}</p>
+      <p className="text-xs leading-relaxed text-zinc-400">{children}</p>
+    </div>
+  );
+}
+
+function DownloadButtons({ imageName }: { imageName: string }) {
+  const downloadLink = `https://dl.getaurora.dev/${imageName}-webui-x86_64.iso`;
+  const checksumLink = `https://dl.getaurora.dev/${imageName}-webui-x86_64.iso-CHECKSUM`;
   const t = useTranslations("Download-Component");
 
   return (
-    <div className="grid gap-4 lg:grid-cols-2">
+    <div className="grid gap-3 sm:grid-cols-2">
       <a
         href={downloadLink}
-        className="group flex items-center justify-center gap-4 rounded-2xl border border-aurora-darkblue/50 bg-linear-to-r from-aurora-darkblue to-aurora-purple p-8 text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl hover:shadow-aurora-darkblue/30"
+        className="group flex items-center justify-center gap-3 rounded-xl border border-none bg-linear-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina px-6 py-5 font-semibold text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-aurora-darkblue/30 hover:shadow-xl"
       >
-        <CloudDownload className="h-8 w-8 shrink-0 transition-transform group-hover:scale-110" />
-        <div className="text-center">
-          <div className="text-xl font-bold">{t("download-iso")}</div>
-          <div className="mt-1 text-sm text-white/80">({imageName})</div>
-        </div>
+        <HardDriveDownload className="h-5 w-5 shrink-0 transition-transform group-hover:scale-110" />
+        <span>{t("download-iso")}</span>
       </a>
 
       <a
         href={checksumLink}
-        className="group flex items-center justify-center gap-4 rounded-2xl border border-zinc-500 bg-zinc-900/40 p-8 text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:border-aurora-orangina/50 hover:bg-zinc-900/60 hover:shadow-2xl hover:shadow-aurora-orangina/20"
+        className="group flex items-center justify-center gap-3 rounded-xl border border-zinc-700/50 bg-zinc-900/40 px-6 py-5 font-semibold text-zinc-300 shadow-lg transition-all duration-200 hover:scale-[1.02] hover:border-zinc-500 hover:text-white hover:shadow-xl"
       >
-        <Package className="h-8 w-8 shrink-0 text-aurora-orangina transition-transform group-hover:scale-110" />
-        <div className="text-center">
-          <div className="text-xl font-bold">{t("checksum")}</div>
-          <div className="mt-1 text-sm text-zinc-400">(SHA256)</div>
-        </div>
+        <ShieldCheck className="h-5 w-5 shrink-0 text-zinc-400 transition-transform group-hover:scale-110 group-hover:text-white" />
+        <span>{t("checksum")}</span>
       </a>
     </div>
   );

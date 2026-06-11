@@ -20,7 +20,6 @@ import {
 import { AnimatePresence, motion } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
 import SharedNavbar from "@/components/nav/SharedNavbar";
-import Footer from "@/components/footer/Footer";
 import { StarsBackground } from "@/components/ui/stars-background";
 import artData from "@/data/art.json";
 
@@ -33,7 +32,7 @@ type Artwork = {
 	images?: string[];
 	thumbnail?: string;
 	profilePicture?: string;
-	artist: string;
+	artist?: string;
 };
 
 type Artist = {
@@ -51,8 +50,18 @@ const getArtworkImages = (artwork: Artwork): string[] => {
 	return [];
 };
 
-const getArtworkPreview = (artwork: Artwork): string | undefined =>
-	artwork.thumbnail || artwork.profilePicture || getArtworkImages(artwork)[0];
+const getWebpSrc = (imagePath: string): string =>
+	imagePath.replace(/\.(png|jpe?g)$/i, ".webp");
+
+const getArtworkDisplayImages = (artwork: Artwork): string[] =>
+	getArtworkImages(artwork).map(getWebpSrc);
+
+const getArtworkPreview = (artwork: Artwork): string | undefined => {
+	const previewSource =
+		artwork.thumbnail || artwork.profilePicture || getArtworkImages(artwork)[0];
+
+	return previewSource ? getWebpSrc(previewSource) : undefined;
+};
 
 function CategoryCarousel({
 	category,
@@ -183,7 +192,8 @@ export default function ArtGalleryPage() {
 		return category === "wallpapers" ? artworks.reverse() : artworks;
 	};
 
-	const getArtist = (artistKey: string): Artist => {
+	const getArtist = (artistKey?: string): Artist | undefined => {
+		if (!artistKey) return undefined;
 		return artData.artists[artistKey as keyof typeof artData.artists];
 	};
 
@@ -206,8 +216,15 @@ export default function ArtGalleryPage() {
 	const selectedArtworkImages = selectedArtwork
 		? getArtworkImages(selectedArtwork)
 		: [];
+	const selectedArtworkDisplayImages = selectedArtwork
+		? getArtworkDisplayImages(selectedArtwork)
+		: [];
 
-	const selectedArtworkImage =
+	const selectedArtworkDisplayImage =
+		selectedArtworkDisplayImages[selectedImageIndex] ||
+		(selectedArtwork ? getArtworkPreview(selectedArtwork) : undefined) ||
+		"";
+	const selectedArtworkDownloadImage =
 		selectedArtworkImages[selectedImageIndex] ||
 		selectedArtwork?.image ||
 		selectedArtwork?.thumbnail ||
@@ -439,7 +456,7 @@ export default function ArtGalleryPage() {
 												onClick={(e) => e.stopPropagation()}
 											>
 												<a
-													href={selectedArtworkImage}
+													href={selectedArtworkDownloadImage}
 													download
 													className="flex items-center gap-3 px-4 py-3 text-sm text-white transition-colors hover:bg-zinc-700"
 													onClick={() => setShowDownloadMenu(false)}
@@ -461,7 +478,7 @@ export default function ArtGalleryPage() {
 									</>
 								) : (
 									<a
-										href={selectedArtworkImage}
+										href={selectedArtworkDownloadImage}
 										download
 										onClick={(e) => e.stopPropagation()}
 										className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-xs transition-colors hover:bg-zinc-700"
@@ -529,8 +546,8 @@ export default function ArtGalleryPage() {
 								</>
 							)}
 							<img
-								src={selectedArtworkImage}
-								alt={t(`artworks.${selectedArtwork.id}.title`)}
+								src={selectedArtworkDisplayImage}
+								alt={selectedArtwork.title}
 								className="max-h-[80vh] max-w-[90vw] object-contain"
 								style={{
 									transform: `scale(${zoom}) translate(${position.x / zoom}px, ${position.y / zoom}px)`,
@@ -556,33 +573,38 @@ export default function ArtGalleryPage() {
 										</span>
 									)}
 								</h2>
-								<div className="flex flex-wrap items-center gap-4">
-									<div className="flex items-center gap-2">
-										<span className="text-sm text-zinc-500">
-											{t("by-artist")}
-										</span>
-										<span className="font-medium text-white">
-											{getArtist(selectedArtwork.artist).displayName}
-										</span>
-									</div>
-									<a
-										href={getArtist(selectedArtwork.artist).sponsorLink}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="flex items-center gap-2 rounded-full bg-pink-500/20 px-4 py-2 text-sm font-medium text-pink-400 transition-colors hover:bg-pink-500/30"
-									>
-										<Heart className="h-4 w-4" />
-										{t("sponsor-artist")}
-										<ExternalLink className="h-3 w-3" />
-									</a>
-								</div>
+								{(() => {
+									const artist = getArtist(selectedArtwork.artist);
+									if (!artist) return null;
+									return (
+										<div className="flex flex-wrap items-center gap-4">
+											<div className="flex items-center gap-2">
+												<span className="text-sm text-zinc-500">
+													{t("by-artist")}
+												</span>
+												<span className="font-medium text-white">
+													{artist.displayName}
+												</span>
+											</div>
+											<a
+												href={artist.sponsorLink}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="flex items-center gap-2 rounded-full bg-pink-500/20 px-4 py-2 text-sm font-medium text-pink-400 transition-colors hover:bg-pink-500/30"
+											>
+												<Heart className="h-4 w-4" />
+												{t("sponsor-artist")}
+												<ExternalLink className="h-3 w-3" />
+											</a>
+										</div>
+									);
+								})()}
 							</div>
 						</motion.div>
 					</motion.div>
 				)}
 			</AnimatePresence>
 
-			<Footer />
 		</div>
 	);
 }

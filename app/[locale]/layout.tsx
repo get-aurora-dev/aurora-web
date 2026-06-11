@@ -6,16 +6,38 @@ import { DiscourseScript } from "./discourse-script";
 import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/config";
+import Footer from "@/components/footer/Footer";
 
 const geist = Geist({ subsets: ["latin"] });
+const siteUrl = new URL("https://getaurora.dev");
 
 export const metadata: Metadata = {
+  metadataBase: siteUrl,
   title: "Aurora - The Linux-based ultimate workstation",
   description:
     "The ultimate productivity workstation, stable and streamlined for you.",
   openGraph: {
     type: "website",
-    images: ["/aurora_wallpaper_september_2025.png"],
+    url: siteUrl,
+    title: "Aurora - The Linux-based ultimate workstation",
+    description:
+      "The ultimate productivity workstation, stable and streamlined for you.",
+    siteName: "Aurora",
+    images: [
+      {
+        url: "/art/wallpapers/wallpaper-11.png",
+        width: 3840,
+        height: 2160,
+        alt: "Skywrecker - Aurora wallpaper",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aurora - The Linux-based ultimate workstation",
+    description:
+      "The ultimate productivity workstation, stable and streamlined for you.",
+    images: ["/art/wallpapers/wallpaper-11.png"],
   },
   icons: {
     icon: "/aurora-logo.svg",
@@ -51,6 +73,7 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

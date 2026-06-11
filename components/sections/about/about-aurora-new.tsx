@@ -14,9 +14,9 @@ export default function AboutAuroraNew({
   downloadRef,
   newsRef,
 }: {
-  aboutRef: RefObject<HTMLDivElement>;
-  downloadRef: RefObject<HTMLDivElement>;
-  newsRef: RefObject<HTMLDivElement>;
+  aboutRef: RefObject<HTMLDivElement | null>;
+  downloadRef: RefObject<HTMLDivElement | null>;
+  newsRef: RefObject<HTMLDivElement | null>;
 }) {
   return (
     <main className={"relative min-h-dvh bg-gray-950 p-10 text-white"}>

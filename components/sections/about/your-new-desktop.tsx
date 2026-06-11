@@ -34,7 +34,7 @@ export default function YourNewDesktop() {
           <div className="relative h-full w-full bg-black text-white dark:bg-white dark:text-black">
             <img
               className={"h-full w-full"}
-              src={"/newdesktop.png"}
+              src={"/newdesktop.webp"}
               alt={"Desktop"}
             />
           </div>

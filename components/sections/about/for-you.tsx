@@ -32,9 +32,8 @@ export default function ForYou() {
             <div className={"shrink-0"}>
               <RotateCw
                 size={48}
-                className={
-                  "animate-spin text-aurora-blue animate-duration-[5000ms]"
-                }
+                className="text-aurora-blue"
+                style={{ animation: "spin 12s linear infinite" }}
               />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>

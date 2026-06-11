@@ -2,7 +2,6 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import {
-  Github,
   Heart,
   Users,
   Code,
@@ -14,6 +13,7 @@ import {
   GraduationCap,
   Boxes,
 } from "lucide-react";
+import GithubIcon from "@/components/GithubIcon";
 import {
   ContributorCard,
   ContributorBadge,
@@ -25,7 +25,6 @@ import contributorsData from "@/data/contributors.json";
 import contributorsCache from "@/data/contributors-cache.json";
 import { StarsBackground } from "@/components/ui/stars-background";
 import SharedNavbar from "@/components/nav/SharedNavbar";
-import Footer from "@/components/footer/Footer";
 
 type GitHubContributor = {
   login: string;
@@ -347,7 +346,7 @@ export default function ContributorsPage() {
         {otherContributors.length > 0 && (
           <section className="mb-16">
             <div className="mb-8 flex items-center gap-3">
-              <Github className="h-6 w-6 text-zinc-400" />
+              <GithubIcon color="#a1a1aa" size={24} />
               <h2 className="text-3xl font-bold text-white">
                 {t("all-contributors")}
               </h2>
@@ -381,7 +380,7 @@ export default function ContributorsPage() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-xl bg-linear-to-r from-aurora-blue to-aurora-darkblue px-6 py-3 font-semibold text-white transition-all hover:scale-105"
             >
-              <Github className="h-5 w-5" />
+              <GithubIcon color="#ffffff" size={20} />
               {t("contribute-github")}
             </a>
             <a
@@ -396,7 +395,6 @@ export default function ContributorsPage() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }
