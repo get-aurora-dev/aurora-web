@@ -113,44 +113,44 @@
 		"background-images": "Imágenes de fondo por Jonatan Pie desde",
 		"animated-icons": "Iconos animados desde",
 		"link-icons": "aquí.",
-		"copyright": "© Copyright Project Aurora authors.",
-		"not-affiliated": "Aurora is not affiliated and or endorsed by The Fedora Project, KDE e.V., The KDE Project, Red Hat, Microsoft, ASUS or any other companies mentioned above."
+		"copyright": "© Copyright Project Aurora autores.",
+		"not-affiliated": "Aurora no está asociada con The Fedora Project, KDE e.V., The KDE Project, Red Hat, Microsoft, ASUS, o ninguna otra empresa."
 	},
 	"FAQ": {
-		"faq-title": "Aurora FAQ",
-		"faq-intro": "Interested in more details? Find answers to the most burning questions.",
-		"click-here": "Click here!",
+		"faq-title": "Preguntas frecuentes",
+		"faq-intro": "¿Quieres más detalles? Aquí, las respuestas para las mayores preguntas.",
+		"click-here": "¡Clickea aquí!",
 		"questions": {
 			"q1": {
-				"question": "Can I get GNOME with that?",
-				"answer": "If you'd like GNOME rather than KDE, install Bluefin!",
+				"question": "¿Puedo tener GNOME en eso?",
+				"answer": "Si prefieres GNOME antes que KDE, ¡instala Bluefin!",
 				"optionalLink": "https://projectbluefin.io"
 			},
 			"q2": {
-				"question": "What is Aurora Developer Edition? (Aurora-DX)?",
-				"answer": "Aurora Developer Edition is a special edition of Aurora featuring various additional packages that cater to a development audience. These included preinstalled VS Code with DevContainer capabilities, Docker and Podman as container runtimes, tools for creating and managing virtual machines, tools to create a containerized development environment with DevPod and much more. The developer experience also includes various tools for cloud-native developers. You can always install more via brew! If you want the raw package list, click the link.",
+				"question": "¿Qué es Aurora Developer Edition? (Aurora-DX)?",
+				"answer": "Aurora Developer Edition es una edición especial, que trae paquetes para desarrolladores que los necesiten. Incluye VS Code preinstalado con capacidades DevContainer, Docker y Podman como entornos de contenedores, herramientas para usar máquinas virtuales, herramientas para crear un ambiente contenerizado con DevPod y más. La experiencia desarrollador también incluye herramentas para desarrolladores de cloud-native. ¡Y siempre puedes instalas más con Brew! Si quieres una lista de todos los paquetes, clickea el link.",
 				"optionalLink": "https://github.com/ublue-os/bluefin/blob/main/packages.json"
 			},
 			"q3": {
-				"question": "What's the difference between Vanilla Kinoite and Aurora?",
-				"answer": "Vanilla Kinoite is a very stock experience. Aurora includes many enhancements and tweaks, like included drivers for various printers, network adapters, game controllers and more as well as included codecs.",
+				"question": "¿Cuál es la diferencia entre Kinoite y Aurora?",
+				"answer": "Kinoite es una experiencia muy básica. Aurora incluye varias mejoras y toques, como incluir drivers para impresoras, adaptadores de network, mandos, códecs y más.",
 				"optionalLink": ""
 			},
 			"q4": {
-				"question": "Where can I get the latest news and discussions about Aurora?",
-				"answer": "Check out our Discourse forums for the latest updates and discussions on Aurora.",
+				"question": "¿Dónde puedo ver las últimas noticias y discusiones de Aurora?",
+				"answer": "Mira nuestro foro de Discourse para las últimas noticias y discusiones de Aurora.",
 				"optionalLink": "https://universal-blue.discourse.group/c/bluefin/6"
 			}
 		}
 	},
 	"For-You": {
-		"title": "How does Aurora fit in for you?",
-		"subtitle": "Here are a few reasons why you should consider using Aurora.",
-		"automatic-updates": "Automatic updates, forever.",
-		"automatic-updates-text": "Aurora downloads and applies updates automatically in the background. This includes the operating system itself and all installed applications.",
-		"automatic-updates-highlight": "Let us take care of your updates.",
-		"hardware-support": "Expanded hardware support.",
-		"hardware-support-text": "Aurora includes support for all graphics cards and CPUs, including GPUs from Nvidia. Expanded hardware support extends to game controllers and more printer drivers.",
+		"title": "¿Cómo encaja Aurora para ti?",
+		"subtitle": "Aquí, algunas razones para considerar Aurora.",
+		"automatic-updates": "Actualizaciones automáticas, para siempre.",
+		"automatic-updates-text": "Aurora instala actualizaciones en segundo plano. Esto incluye el sistema operativo y todas tus aplicaciones.",
+		"automatic-updates-highlight": "Déjanos a cargo de tus actualizaciones.",
+		"hardware-support": "Mayor soporte de hardware.",
+		"hardware-support-text": "Aurora incluye soporte para todas las placas de video (Nvidia incluida) y CPU. Esto incluye soporte de drivers para mandos e impresoras.",
 		"hardware-support-highlight": "Game on, no problem.",
 		"helping-you": "Helping you along the way.",
 		"helping-you-text": "We include scripts and common utilities to help you get started quickly and set up some common pieces of software in an non intrusive way."
