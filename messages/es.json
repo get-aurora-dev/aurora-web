@@ -1,0 +1,311 @@
+{
+	"Navbar": {
+		"end-user": "Sobre Aurora",
+		"developer": "Para Desarrolladores",
+		"faq": "Preguntas Frecuentes",
+		"news": "Noticias",
+		"contributors": "Contribuidores",
+		"art": "Galería de Arte",
+		"download": "Descargar"
+	},
+	"Download-Component": {
+		"get-aurora": "Conseguir Aurora",
+		"download-iso": "Descargar ISO",
+		"checksum": "Obtener checksum para verificar",
+		"ready-to-ride": "¿Listo para subirte a la nave? Elige tu configuración de hardware y descarga el ISO.",
+		"hwe-version": "¿Tienes un dispositivo Surface o ASUS?",
+		"select-hardware": "Elige tu hardware",
+		"primary-gpu": "GPU principal",
+		"pick-gpu": "Elige tu GPU principal",
+		"developer-version": "Versión para desarrolladores",
+		"are-you-dev": "¿Quieres las herramientas para desarrolladores?",
+		"grab-iso": "Agarra el ISO para una instalación limpia:",
+		"yes-option": "Sí",
+		"no-option": "No",
+		"check-out": "Explora la",
+		"documentation": "documentación aquí.",
+		"title": "Descargar Aurora",
+		"hardware-config": "Configuración de Hardware y Descarga",
+		"gpu-description": "Elige tu GPU principal para la edición con controladores optimizados para tu hardware.",
+		"intel-amd": "Intel / AMD",
+		"nvidia": "Nvidia (Serie RTX/GTX 16xx)",
+		"installation-guide": "Guía de Instalación",
+		"recommend-using": "Recomendamos usar",
+		"fedora-image-writer": "Fedora Image Writer",
+		"create-usb": "para crear la instalación en el flash USB.",
+		"note": "Nota:",
+		"ventoy-not-supported": "Ventoy no está soportado con nuestros ISO.",
+		"ready-to-download": "Listo para Descargar",
+		"personalized-image": "Tu imagen de Aurora personalizada:",
+		"developer-mode": "Modo Desarollador",
+		"run-after-install": "luego de la instalación.",
+		"learn-more": "Aprende más",
+		"rebasing": "Rebasear",
+		"image-name-will-be": "El nombre de tu imagen será <bold>{name}</bold>.",
+		"slow-download": "¿Descarga lenta?",
+		"check-friends": "Check out our friends at",
+		"select-hardware-config": "Selecciona tu hardware",
+		"choose-gpu": "Selecciona tu placa de video para continuar con la descarga",
+		"run": "Correr"
+	},
+	"Introduction": {
+		"title": "Aurora,",
+		"stargazer": "Hola, miraestrellas. Aurora te espera.",
+		"powered": "Hecho con la genialidad de KDE y Universal Blue, para ti.",
+		"onboard": "Súbete a la nave de tu nuevo sistema operativo.",
+		"gaze": " Miremos a las estrellas juntos, compañero.",
+		"learn-more": "Aprender más",
+		"tagline": "está aquí. Disfruta de una experiencia rápida, estable y privada para tu PC.",
+		"go-to-docs": "Ir a la documentación",
+		"loop-1": "Desarrolla tu siguiente app.",
+		"loop-2": "Lanza un cohete espacial.",
+		"loop-3": "Mira vídeos.",
+		"loop-4": "Dibuja tu siguiente póster de película.",
+		"loop-5": "Divide un átomo de helio.",
+		"loop-6": "Sueña con las estrellas.",
+		"loop-7": "Juega y trabaja duro.",
+		"loop-8": "Crea la siguiente nave."
+	},
+	"About-Aurora": {
+		"for-end-user": "Aurora para usuarios finales",
+		"reliable": "Aurora es la imagen para gente que quiere una experiencia segura y rápida para tareas diarias y más allá.",
+		"simply-delightful": "Sencillamente maravilloso.",
+		"simply-delightful-text": "Aurora presenta un KDE Plasma customizado para una experiencia fluida, que se puede customizar infinitamente.",
+		"simply-delightful-purple": "Hasta puedes mover la barra de tareas.",
+		"speed-reliability": "Velocidad y fiabilidad",
+		"speed-reliability-text": "Perfectamente pulido para máxima eficiencia y fiabilidad, como una vieja máquina.",
+		"speed-reliability-purple": "Tu ordenador nunca se sentirá igual.",
+		"zero-maintenance": "Nada de Mantenimiento",
+		"zero-maintenance-text": "El sistema solo se tiene que instalar una vez. Todas las actualizaciones se hacen en segundo plano para ti.",
+		"zero-maintenance-purple": "Colocar y olvidarse. Un sueño.",
+		"hardware-support": "Soporte de Hardware",
+		"hardware-support-text": "Tenemos versiones para usuarios de Surface y ASUS, las cuales incluyen mayor soporte de hardware para mandos, impresoras, y mucho más.",
+		"hardware-support-purple": "No olvides imprimir las facturas de la nave."
+	},
+	"About-AuroraDx": {
+		"for-developers": "Aurora para desarrolladores",
+		"pro-stargazing": "¿Eres bueno mirando estrellas? La edición desarollador toma la fundación y la sube al máximo.",
+		"brew-ready": "Brew, listo para lo que necesites.",
+		"brew-ready-text": "Brew está preinstalado y listo para usar en Aurora. Úsalo para instalar cada programa CLI que se te ocurra! Brew está integrado para nunca molestar en tu sistema.",
+		"brew-ready-red": "La cerveza nunca fue tan rica.",
+		"containers-best-friends": "Containers, tus mejores amigos.",
+		"containers-best-friends-text": "Docker y Podman vienen configurados para adaptarse a todo tipo de trabajo, incluyendo una experiencia contenida de CLI. Y con Ptyxis, tu distrobox está solo a un click.",
+		"containers-best-friends-red": "Nunca digas 'Funciona en mi PC' de vuelta.",
+		"preconfigured-work": "Configurado y listo para trabajo serio.",
+		"preconfigured-work-text": "Visual Studio Code ya viene instalado y configurado para soportar trabajos de DevContainers. Y con solo un comando, si preiferes el café, puedes conseguir Jetbrains Toolbox.",
+		"preconfigured-work-red": "O usa neovim (si sabes cómo salir).",
+		"robots-take-over": "Deja que los robots manden.",
+		"robots-take-over-text": "Si prefieres una LLM local en un trabajo de aprendizaje automático, Aurora también te servirá. Corre una LLM privada con Ollama, y usa una distrobox pytorch para un trabajo serio de IA.",
+		"robots-take-over-red": "¡Usa al robot para tu ventaja!."
+	},
+	"Build-Your-Own": {
+		"build-your-own": "Crea tu propia Aurora",
+		"want-to-build": "¿Quieres crear tu propia imagen? O extender Aurora con tus propios temas? Para empezar, usa la plantilla de imagen. Solamente necesitas conocimiento de contenedorización usando Docker, y solo un poquito de tiempo. ¡Vamos arriba!",
+		"get-image-template": "Conseguir la plantilla"
+	},
+	"Footer": {
+		"go-up": "Ir arriba",
+		"proudly-built": "Orgullosamente creado con",
+		"proudly-built-phrase": "herramientas comunitarias diseñadas para resetear el escritorio de Linux. Hecho por amor al juego. Bienvenido a Indie Cloud Native.",
+		"built-with-love": "Hecho con ❤️ con contribuidores de todo el mundo.",
+		"refined-logo": "Logo pulido creado por @reisvg.",
+		"background-credits": "Créditos de las imágenes de fondo:",
+		"background-images": "Imágenes de fondo por Jonatan Pie desde",
+		"animated-icons": "Iconos animados desde",
+		"link-icons": "aquí.",
+		"copyright": "© Copyright Project Aurora autores.",
+		"not-affiliated": "Aurora no está asociada con The Fedora Project, KDE e.V., The KDE Project, Red Hat, Microsoft, ASUS, o ninguna otra empresa."
+	},
+	"FAQ": {
+		"faq-title": "Preguntas frecuentes",
+		"faq-intro": "¿Quieres más detalles? Aquí, las respuestas para las mayores preguntas.",
+		"click-here": "¡Cliquea aquí!",
+		"questions": {
+			"q1": {
+				"question": "¿Puedo tener GNOME en eso?",
+				"answer": "Si prefieres GNOME antes que KDE, ¡instala Bluefin!",
+				"optionalLink": "https://projectbluefin.io"
+			},
+			"q2": {
+				"question": "¿Qué es Aurora Developer Edition? (Aurora-DX)?",
+				"answer": "Aurora Developer Edition es una edición especial, que trae paquetes para desarrolladores que los necesiten. Incluye VS Code preinstalado con capacidades DevContainer, Docker y Podman como entornos de contenedores, herramientas para usar máquinas virtuales, herramientas para crear un ambiente contenerizado con DevPod y más. La experiencia desarrollador también incluye herramentas para desarrolladores de cloud-native. ¡Y siempre puedes instalas más con Brew! Si quieres una lista de todos los paquetes, cliquea el link.",
+				"optionalLink": "https://github.com/ublue-os/bluefin/blob/main/packages.json"
+			},
+			"q3": {
+				"question": "¿Cuál es la diferencia entre Kinoite y Aurora?",
+				"answer": "Kinoite es una experiencia muy básica. Aurora incluye varias mejoras y toques, como incluir drivers para impresoras, adaptadores de network, mandos, códecs y más.",
+				"optionalLink": ""
+			},
+			"q4": {
+				"question": "¿Dónde puedo ver las últimas noticias y discusiones de Aurora?",
+				"answer": "Mira nuestro foro de Discourse para las últimas noticias y discusiones de Aurora.",
+				"optionalLink": "https://universal-blue.discourse.group/c/bluefin/6"
+			}
+		}
+	},
+	"For-You": {
+		"title": "¿Cómo encaja Aurora para ti?",
+		"subtitle": "Aquí, algunas razones para considerar Aurora.",
+		"automatic-updates": "Actualizaciones automáticas, para siempre.",
+		"automatic-updates-text": "Aurora instala actualizaciones en segundo plano. Esto incluye el sistema operativo y todas tus aplicaciones.",
+		"automatic-updates-highlight": "Déjanos a cargo de tus actualizaciones.",
+		"hardware-support": "Mayor soporte de hardware.",
+		"hardware-support-text": "Aurora incluye soporte para todas las placas de video (Nvidia incluida) y CPU. Esto incluye soporte de drivers para mandos e impresoras.",
+		"hardware-support-highlight": "Juega, sin problema.",
+		"helping-you": "Te ayudamos en el camino.",
+		"helping-you-text": "Incluimos scripts y utilidades comunes para ayudarte a iniciar y configurar algunos programas comunes."
+	},
+	"For-Developers": {
+		"title": "Aurora para desarrolladores",
+		"subtitle": "Desde una gran fundación, Aurora Developer Experience (DX) está diseñada para facilitar las vidas de los desarrolladores que necesiten herramientas comunes.",
+		"local-ai": "Operaciones de IA local",
+		"local-ai-text": "Aurora te facilita empezar a correr tu IA local, al incluir drivers para tu GPU y utilidades comunes.",
+		"local-ai-highlight": "Los robots llegaron para servirte.",
+		"containers": "Herramientas de contenedor preinstaladas.",
+		"containers-text": "Aurora Developer Experience incluye Docker y Podman, para flexibilidad en los trabajos contenedor que más demandan.",
+		"containers-highlight": "Cloud-Native nunca ha sido tan fácil.",
+		"dev-tools": "Las herramientas de desarrollador están a solo un clic.",
+		"dev-tools-text": "La experiencia desarrollador incluye herramientas comunes como VS Code, y viene configurada para desarrollo contenerizado con DevContainers. Productos Jetbrains están a solo un comando.",
+		"dev-tools-highlight": "Todo lo que necesitas, lo trae.",
+		"homebrew": "Con Homebrew",
+		"homebrew-text": "Aurora incluye Homebrew, facilitando descubrir, instalar y mantener tus herramientas CLI favoritas actualizadas. Encuentra miles de librerías y herramientas en Brew, integradas para que no conflicten con tu sistema.",
+		"homebrew-highlight": "Las herramientas de desarollo nunca habían sido tan prácticas."
+	},
+	"Your-New-Desktop": {
+		"title": "Este es tu nuevo escritorio.",
+		"subtitle": "Enciende y siente cómodo al usar tu ordenador, desde el inicio. Sin distracciones ni anuncios. Desarrolla más rápido que nunca. Explora la galaxia. Escribe tu próxima novela.",
+		"kde-title": "Hecho con KDE Plasma.",
+		"kde-text": "Aurora está hecha alrededor el customizable entorno de escritorio KDE Plasma, customizado para darte la mejor experiencia desde el inicio.",
+		"kde-highlight": "Siéntete como en casa, desde el inicio.",
+		"defaults-title": "Buenos valores por defecto",
+		"defaults-text": "Con aplicaciones y valores cuidadosamente seleccionados, Aurora está hecho para el fácil, divertido y productivo uso diario. Te cuida y trabaja contigo.",
+		"defaults-highlight": "Todo preconfigurado, nada de lo que preocuparse."
+	},
+	"Paradigm-Shift": {
+		"title": "Aurora es un cambio de paradigma en Linux.",
+		"subtitle": "Para repensar la experiencia de Linux en escritorio, construímos Aurora sobre principios y tecnologías modernas. ¿Qué significa esto para ti?",
+		"rock-solid": "Sólido.",
+		"rock-solid-text-1": "Creamos Aurora con tecnologías y principios totalmente diferentes a un escritorio de Linux normal.",
+		"rock-solid-text-2": "Las actualizaciones son testeadas antes de que te llegen (¡lo cual pasará en segundo plano!).",
+		"rock-solid-text-3": "Y si una nueva versión de Aurora rompe algo, puedes volver atrás.",
+		"rock-solid-highlight": "El futuro está basado en imágenes.",
+		"app-store": "Una tienda de apps unida.",
+		"app-store-text": "Utilizando el poder de la Tienda de Apps Flathub, tenemos una tienda unificada para desarrolladores y usuarios. Por primera vez, hay una tienda de apps unificada para Linux, donde los desarrolladores pueden publicar sus programas fácilmente y ganar dinero para apoyar su trabajo de Código Abierto.",
+		"app-store-highlight": "Es el año de la Tienda de Apps en Linux.",
+		"checkout-flathub": "Chequea Flathub",
+		"extendable": "Fácilmente auditable y ampliable.",
+		"extendable-text": "Aurora no es nada más que una colección de scripts bash, containerfiles y programas. Facilita auditar, contribuir y ayudar. Esperamos alentar contribuciones de nuevos usuarios, creando un sistema fácil de entrar. Acompáñanos en esta aventura.",
+		"extendable-highlight": "El poder de Docker está aquí para el escritorio. Una locura."
+	},
+	"Contributors": {
+		"title": "Por la comunidad, para la comunidad.",
+		"subtitle": "Aurora está creada y mantenida por la comunidad, para la comunidad. Somos apasionados en lo que hacemos.",
+		"error": "Los contribuidores no pudieron cargarse. Prueba otra vez luego.",
+		"view-all": "Ver todos los contribuidores",
+		"repo-activity-title": "Actividad del repo",
+		"repo-activity-powered-by": "Impulsado por Repobeats",
+		"repo-activity-alt": "Analíticas de Repobeats"
+	},
+	"Stats-Section": {
+		"title": "Estadísticas del proyecto",
+		"previous-slide": "Diapositiva de las previas estadísticas",
+		"next-slide": "Siguiente diapositiva de estadísticas",
+		"go-to-slide": "Ir a {title}",
+		"slides": {
+			"countme": {
+				"title": "Crecimiento de Aurora (countme)",
+				"alt": "Gráfico de crecimiento de Aurora, desde countme",
+				"powered-by-label": "Impulsado por countme"
+			},
+			"star-history": {
+				"title": "Historia de estrellas",
+				"alt": "Gráfico de historia de estrellas en ublue-os/aurora"
+			}
+		}
+	},
+	"Language": {
+		"select": "Idioma",
+		"en": "English",
+		"de": "Deutsch"
+	},
+	"News": {
+		"title": "Noticias",
+		"latest-from-blog": "Novedades del blog",
+		"loading": "Cargando publicaciones del blog...",
+		"failed-to-load": "No se pudo cargar las publicaciones del blog",
+		"no-posts": "No hay publicaciones del blog disponibles",
+		"view-all": "Ver todas las publicaciones del blog"
+	},
+	"Docs-Community": {
+		"title": "Documentación y Comunidad",
+		"subtitle": "Si quieres consultar nuestra documentation o contribuir a ella, o simplemente estar en la comunidad, encontrarás todo aquí. Tenemos foros y un servidor de Discord.",
+		"docs-title": "Nuestra documentación",
+		"docs-text": "Consigue ayuda, leyendo la documentación, o contribuye a ella si quieres mejorarla.",
+		"docs-highlight": "El conocimiento a tu alcance.",
+		"contribute-docs": "Contribuye a la documentación",
+		"read-docs": "Leer documentación",
+		"community-title": "Comunidad",
+		"community-text": "Tenemos foros para que hagas preguntas y discutir temas técnicos, o únete a nuestro servidor de Discord para hablar con otros usuarios y desarrolladores de Aurora.",
+		"community-highlight": "Únete a la conversación.",
+		"visit-forums": "Visitar foros",
+		"join-discord": "Unirse al Discord"
+	},
+	"Contributors-Page": {
+		"title": "Nuestros contribuidores",
+		"subtitle": "Aurora está hecha por gente apasionada desde todo el mundo. Gracias a todos los contribuidores y responsables que hacen a Aurora posible.",
+		"back-home": "Volver a Inicio",
+		"view-github": "Ver en GitHub",
+		"sponsor-title": "Apoya a los contribuidores",
+		"sponsor-subtitle": "Varioa contribuidores aceptan promociones. Tu apoyo ayuda al desarrollo activo y sostenible de Aurora.",
+		"sponsor-button": "Promocionar en GitHub",
+		"maintainers": "Mantenedores",
+		"artists": "Artistas",
+		"emeritus": "Mantenedor emérito",
+		"special-guests": "Invitados especiales",
+		"ublue": "Universal Blue",
+		"advisors": "Asesores y mentores",
+		"contributors": "Contribuidores",
+		"designers": "Diseñadores",
+		"translators": "Traductores",
+		"all-contributors": "Todos los contribuidores del Repositorio",
+		"all-contributors-subtitle": "Todos los que han contribuido código al repositorio de Aurora.",
+		"loading": "Cargando contribuidores...",
+		"join-title": "¿Quieres contribuir?",
+		"join-subtitle": "Aceptamos contribuciones de todo tipo - código, documentación, traducción, ¡y más!",
+		"contribute-github": "Contribuir en GitHub",
+		"join-discord": "Únete a nuestro Discord",
+		"footer-note": "Gracias a todos los contribuidores por hacer posible a Aurora.",
+		"roles": {
+			"maintainer": "Mantenedor",
+			"artist": "Artista",
+			"emeritus": "Mantenedor emérito",
+			"special-guest": "Invitado especial",
+			"advisor": "Asesor y mentor",
+			"ublue": "Universal Blue",
+			"contributor": "Contribuidor",
+			"designer": "Diseñador",
+			"translator": "Traductor"
+		}
+	},
+	"Art-Page": {
+		"title": "Galería de Arte de Aurora",
+		"subtitle": "Descubre el arte creado por humanos para Aurora.",
+		"by-artist": "por",
+		"sponsor-artist": "Apoya a este artista",
+		"close": "Cerrar",
+		"zoom-in": "Hacer zoom",
+		"zoom-out": "Reducir zoom",
+		"reset-zoom": "Restablecer zoom",
+		"download": "Descargar",
+		"download-character": "Personaje",
+		"download-profile": "Foto de Perfil",
+		"all": "Todos los",
+		"categories": {
+			"characters": "Personajes",
+			"wallpapers": "Fondos de pantalla"
+		},
+		"contribute-title": "Contribuye tu Arte",
+		"contribute-description": " Aurora se dedica a apoyar el arte real hecho por humanos. Cada mes, un nuevo fondo de pantalla te llegará directamente a ti. ¿Quieres contribuir el tuyo? Haz un Pull Request a nuestro repositorio Wallpaper, y todos lo podrán instalar con Brew. Si amamos tu dibujo, podríamos comisionarte para el próximo fondo de pantalla mensual.",
+		"contribute-button": "Subir fondo de pantalla"
+	}
+}

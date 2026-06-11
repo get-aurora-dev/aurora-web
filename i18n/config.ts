@@ -24,6 +24,7 @@ export interface Language {
  */
 export const languages: Language[] = [
   { code: 'en', name: 'English', nativeName: 'English' },
+  { code: 'es', name: 'Spanish', nativeName: 'Español' },
   { code: 'de', name: 'German', nativeName: 'Deutsch' },
   { code: 'fr', name: 'French', nativeName: 'Français' },
   { code: 'pt-PT', name: 'Portuguese (Portugal)', nativeName: 'Português (Portugal)' },
