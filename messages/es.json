@@ -106,7 +106,7 @@
 	"Footer": {
 		"go-up": "Ir arriba",
 		"proudly-built": "Orgullosamente creado con",
-		"proudly-built-phrase": "herramientas comunitarias diseñadas para resetear el escritorio de Linux. Hecho por amor al juego. Bienvenido a Indie Cloud Native.",
+		"proudly-built-phrase": "una herramienta comunitarias diseñadas para resetear el escritorio de Linux. Hecho por amor al juego. Bienvenido a Indie Cloud Native.",
 		"built-with-love": "Hecho con ❤️ con contribuidores de todo el mundo.",
 		"refined-logo": "Logo pulido creado por @reisvg.",
 		"background-credits": "Créditos de las imágenes de fondo:",
@@ -151,7 +151,7 @@
 		"automatic-updates-highlight": "Déjanos a cargo de tus actualizaciones.",
 		"hardware-support": "Mayor soporte de hardware.",
 		"hardware-support-text": "Aurora incluye soporte para todas las placas de video (Nvidia incluida) y CPU. Esto incluye soporte de drivers para mandos e impresoras.",
-		"hardware-support-highlight": "Juega, sin problema.",
+		"hardware-support-highlight": "Sigue jugando, sin problema.",
 		"helping-you": "Te ayudamos en el camino.",
 		"helping-you-text": "Incluimos scripts y utilidades comunes para ayudarte a iniciar y configurar algunos programas comunes."
 	},
@@ -167,7 +167,7 @@
 		"dev-tools": "Las herramientas de desarrollador están a solo un clic.",
 		"dev-tools-text": "La experiencia desarrollador incluye herramientas comunes como VS Code, y viene configurada para desarrollo contenerizado con DevContainers. Productos Jetbrains están a solo un comando.",
 		"dev-tools-highlight": "Todo lo que necesitas, lo trae.",
-		"homebrew": "Con Homebrew",
+		"homebrew": "Homebrew disponible",
 		"homebrew-text": "Aurora incluye Homebrew, facilitando descubrir, instalar y mantener tus herramientas CLI favoritas actualizadas. Encuentra miles de librerías y herramientas en Brew, integradas para que no conflicten con tu sistema.",
 		"homebrew-highlight": "Las herramientas de desarollo nunca habían sido tan prácticas."
 	},
@@ -184,7 +184,7 @@
 	"Paradigm-Shift": {
 		"title": "Aurora es un cambio de paradigma en Linux.",
 		"subtitle": "Para repensar la experiencia de Linux en escritorio, construímos Aurora sobre principios y tecnologías modernas. ¿Qué significa esto para ti?",
-		"rock-solid": "Sólido.",
+		"rock-solid": "Sólido como una roca.",
 		"rock-solid-text-1": "Creamos Aurora con tecnologías y principios totalmente diferentes a un escritorio de Linux normal.",
 		"rock-solid-text-2": "Las actualizaciones son testeadas antes de que te llegen (¡lo cual pasará en segundo plano!).",
 		"rock-solid-text-3": "Y si una nueva versión de Aurora rompe algo, puedes volver atrás.",
@@ -256,7 +256,7 @@
 		"back-home": "Volver a Inicio",
 		"view-github": "Ver en GitHub",
 		"sponsor-title": "Apoya a los contribuidores",
-		"sponsor-subtitle": "Varioa contribuidores aceptan promociones. Tu apoyo ayuda al desarrollo activo y sostenible de Aurora.",
+		"sponsor-subtitle": "Varios contribuidores aceptan promociones. Tu apoyo ayuda al desarrollo activo y sostenible de Aurora.",
 		"sponsor-button": "Promocionar en GitHub",
 		"maintainers": "Mantenedores",
 		"artists": "Artistas",
