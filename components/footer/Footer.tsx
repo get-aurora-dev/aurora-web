@@ -35,12 +35,12 @@ export default function Footer() {
             className={"flex flex-row items-center gap-2 font-bold underline"}
             href={"https://universal-blue.org"}
           >
-            <img src={"/ublue-color.svg"} width={35} height={35} />
+            <img alt={"Universal Blue Logo with a white U and blue gradient background"} src={"/ublue-color.svg"} width={35} height={35} />
             Universal Blue
           </a>
           {t("proudly-built-phrase")}
         </div>
-        <div>{t("built-with-love")}</div>
+        <a className={"underline underline-offset-4"} href={"https://www.youtube.com/watch?v=K0HSD_i2DvA"}>{t("built-with-love")}</a>
         <div>Logos have been crafted by Delphic Melody (@delphicmelody on Discord) and @zandrro. ❤️</div>
         <div
           className={
@@ -75,7 +75,7 @@ export default function Footer() {
           <div className={"text-xl font-bold italic"}>
             Deploying Linux to your machine, please wait...
           </div>
-          <img className={"scale-50"} src={"/glorp.png"} />
+          <img alt={"Linux being sucked up by an alien ship"} className={"scale-50"} src={"/glorp.png"} />
         </div>
       </footer>
     </>
