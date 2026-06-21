@@ -35,7 +35,7 @@ export default function Footer() {
             className={"flex flex-row items-center gap-2 font-bold underline"}
             href={"https://universal-blue.org"}
           >
-            <img alt={"Universal Blue Logo with a white U and blue gradient background"} src={"/ublue-color.svg"} width={35} height={35} />
+            <img aria-hidden={true} alt={""} src={"/ublue-color.svg"} width={35} height={35} />
             Universal Blue
           </a>
           {t("proudly-built-phrase")}
