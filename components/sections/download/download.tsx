@@ -113,13 +113,6 @@ export default function DownloadAurora({
                   </a>{" "}
                   {t("create-usb")}
                 </p>
-
-                <div className="rounded-xl border border-blue-500/20 bg-blue-500/10 p-3">
-                  <p className="text-sm text-blue-200">
-                    <span className="font-medium">{t("note")}</span>{" "}
-                    {t("ventoy-not-supported")}
-                  </p>
-                </div>
               </div>
             </div>
 
