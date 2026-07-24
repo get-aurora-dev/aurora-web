@@ -13,7 +13,7 @@ importers:
         version: 2.3.4(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@rowanmanning/feed-parser':
         specifier: ^2.1.1
-        version: 2.1.3
+        version: 2.1.4
       '@tanstack/react-hotkeys':
         specifier: ^0.10.0
         version: 0.10.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -900,8 +900,8 @@ packages:
   '@radix-ui/rect@1.1.2':
     resolution: {integrity: sha512-xnXE7wG13PI+cxieVssYXlQJuYVRhH9NBoxt3KNwzghDIA69GMm7d4wXRouHIYjE+KvS6U/MsMO73NdS2MH9ZA==}
 
-  '@rowanmanning/feed-parser@2.1.3':
-    resolution: {integrity: sha512-sfr85UZqCNGwPwJ8pBqnZq/vO4wrC/UEfNuCnJAtNSPPQCK7w1sfH6PAzwfNpaAK3erafFFm6m+6TKyCSFw6Bw==}
+  '@rowanmanning/feed-parser@2.1.4':
+    resolution: {integrity: sha512-DddyAYh/3Enb4jVCOzuCadds3Wa+ruJUWwnDb2ImMc1SRDnpyjLRBh73t3pEfvxQ/SFriZoeEA3tjNZs0MItJQ==}
     engines: {node: 20.x || 22.x || 24.x}
 
   '@rtsao/scc@1.1.0':
@@ -3449,7 +3449,7 @@ snapshots:
 
   '@radix-ui/rect@1.1.2': {}
 
-  '@rowanmanning/feed-parser@2.1.3':
+  '@rowanmanning/feed-parser@2.1.4':
     dependencies:
       fast-xml-parser: 5.10.1
       html-entities: 2.6.0
