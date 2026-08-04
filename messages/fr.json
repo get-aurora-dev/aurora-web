@@ -32,7 +32,7 @@
 		"nvidia": "Nvidia (Série RTX/GTX 16xx)",
 		"installation-guide": "Guide d'installation",
 		"recommend-using": "Nous recommandons d'utiliser",
-		"fedora-image-writer": "Fedora Image Writer",
+		"fedora-image-writer": "Fedora Media Writer",
 		"create-usb": "pour créer votre clé USB d'installation.",
 		"note": "Note : ",
 		"ventoy-not-supported": "Ventoy est incompatible avec nos fichiers ISO.",
