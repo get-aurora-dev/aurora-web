@@ -83,7 +83,10 @@ export default function DownloadAurora({
                         {t("fedora-image-writer")}
                         <ArrowUpRight className="h-3.5 w-3.5" />
                       </a>{" "}
-                      {t("create-usb")}
+                      {t("create-usb")}{" "}
+                      <span className="text-zinc-500">
+                        {t("note")} {t("ventoy-not-supported")}
+                      </span>
                     </p>
                   </div>
                   {/* Download Buttons */}
