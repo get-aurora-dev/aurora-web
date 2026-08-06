@@ -70,8 +70,8 @@ export default function DownloadAurora({
 
               {primaryGPU ? (
                 <div className="space-y-4">
-                  
-{/* Installation note */}
+
+                  {/* Installation note */}
                   <div className="flex items-start gap-3 rounded-xl border border-aurora-blue/20 bg-aurora-blue/5 px-4 py-3">
                     <Info className="mt-0.5 h-4 w-4 shrink-0 text-aurora-blue" />
                     <p className="text-sm text-zinc-300">
@@ -83,16 +83,13 @@ export default function DownloadAurora({
                         {t("fedora-image-writer")}
                         <ArrowUpRight className="h-3.5 w-3.5" />
                       </a>{" "}
-                      {t("create-usb")}{" "}
-                      <span className="text-zinc-500">
-                        {t("note")} {t("ventoy-not-supported")}
-                      </span>
+                      {t("create-usb")}
                     </p>
                   </div>
                   {/* Download Buttons */}
                   <DownloadButtons imageName={imageName} />
 
-                  
+
 
                   {/* Extra Info */}
                   <div className="grid gap-3 sm:grid-cols-2">
