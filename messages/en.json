@@ -268,7 +268,7 @@
 		"designers": "Designers",
 		"translators": "Translators",
 		"all-contributors": "All Repository Contributors",
-		"all-contributors-subtitle": "Everyone who has contributed code to the Aurora repository.",
+		"all-contributors-subtitle": "Everyone who has contributed code across the Aurora repositories.",
 		"loading": "Loading contributors...",
 		"join-title": "Want to Contribute?",
 		"join-subtitle": "We welcome contributions of all kinds - code, documentation, translations, and more!",
@@ -285,7 +285,12 @@
 			"contributor": "Contributor",
 			"designer": "Designer",
 			"translator": "Translator"
-		}
+		},
+		"all-repos": "All repositories",
+		"stats-contributors": "Contributors",
+		"stats-repos": "Repositories",
+		"stats-contributions": "Contributions",
+		"no-other-contributors": "All contributors to this repository are already featured above."
 	},
 	"Art-Page": {
 		"title": "Aurora Art Gallery",

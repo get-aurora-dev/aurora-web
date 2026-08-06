@@ -268,7 +268,7 @@
 		"designers": "Designers",
 		"translators": "Translators",
 		"all-contributors": "Все вкладчики репозиторий",
-		"all-contributors-subtitle": "Все участники, кто внёс свой код в репозиторий Aurora.",
+		"all-contributors-subtitle": "Все участники, кто внёс свой код в репозитории Aurora.",
 		"loading": "Загрузка вкладчиков...",
 		"join-title": "Хотите внести вклад?",
 		"join-subtitle": "Мы приветствуем любые вклады — код, документация, перевод и многое другое!",
@@ -285,7 +285,12 @@
 			"contributor": "Contributor",
 			"designer": "Designer",
 			"translator": "Translator"
-		}
+		},
+		"all-repos": "Все репозитории",
+		"stats-contributors": "Участники",
+		"stats-repos": "Репозитории",
+		"stats-contributions": "Вклады",
+		"no-other-contributors": "Все участники этого репозитория уже представлены выше."
 	},
 	"Art-Page": {
 		"title": "Арт-галерея Aurora",

@@ -268,7 +268,7 @@
 		"designers": "Designer",
 		"translators": "Übersetzer",
 		"all-contributors": "Alle Repository-Mitwirkenden",
-		"all-contributors-subtitle": "Alle, die Code zum Aurora-Repository beigetragen haben.",
+		"all-contributors-subtitle": "Alle, die Code zu den Aurora-Repositories beigetragen haben.",
 		"loading": "Mitwirkende werden geladen...",
 		"join-title": "Möchtest du beitragen?",
 		"join-subtitle": "Wir freuen uns über Beiträge aller Art - Code, Dokumentation, Übersetzungen und mehr!",
@@ -285,7 +285,12 @@
 			"contributor": "Mitwirkender",
 			"designer": "Designer",
 			"translator": "Übersetzer"
-		}
+		},
+		"all-repos": "Alle Repositories",
+		"stats-contributors": "Mitwirkende",
+		"stats-repos": "Repositories",
+		"stats-contributions": "Beiträge",
+		"no-other-contributors": "Alle Mitwirkenden dieses Repositories sind bereits oben aufgeführt."
 	},
 	"Art-Page": {
 		"title": "Aurora Kunstgalerie",
