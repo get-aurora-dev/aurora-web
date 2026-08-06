@@ -184,13 +184,11 @@ export function ContributorBadge({
   img,
   profileUrl,
   name,
-  role,
   sponsorLink,
 }: {
   img: string;
   profileUrl: string;
   name: string;
-  role?: string;
   sponsorLink?: string;
 }) {
   return (
@@ -198,7 +196,7 @@ export function ContributorBadge({
       href={profileUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-3 rounded-full border border-aurora-darkblue bg-zinc-900/80 p-2 px-4 transition-all duration-300 hover:scale-105 hover:border-aurora-blue hover:bg-zinc-800"
+      className="group flex items-center gap-3 rounded-full border border-aurora-darkblue bg-zinc-900/80 p-1.5 pr-5 transition-all duration-300 hover:scale-105 hover:border-aurora-blue hover:bg-zinc-800"
     >
       <img
         width={48}

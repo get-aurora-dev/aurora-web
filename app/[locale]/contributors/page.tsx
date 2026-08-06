@@ -1,6 +1,7 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   Heart,
   Users,
@@ -32,7 +33,10 @@ type GitHubContributor = {
   avatar_url: string;
   html_url: string;
   contributions: number;
+  repos?: string[];
 };
+
+type RepoInfo = { name: string; contributorCount: number };
 
 // Use cached data from build time
 const githubUsers = contributorsCache.githubUsers as Record<
@@ -41,6 +45,9 @@ const githubUsers = contributorsCache.githubUsers as Record<
 >;
 const repoContributors =
   contributorsCache.repoContributors as GitHubContributor[];
+const repos = ((contributorsCache as { repos?: RepoInfo[] }).repos ?? []).filter(
+  (r) => r.contributorCount > 0,
+);
 
 // Helper to get GitHub data with fallback
 function getGitHubData(username: string): GitHubUserData {
@@ -56,58 +63,76 @@ function getGitHubData(username: string): GitHubUserData {
   );
 }
 
-const roleIcons: Record<ContributorRole, typeof Users> = {
-  maintainer: Code,
-  contributor: Users,
-  designer: Palette,
-  translator: Languages,
-  artist: Sparkles,
-  emeritus: Award,
-  "special-guest": Star,
-  advisor: GraduationCap,
-  ublue: Boxes,
-};
+// Featured sections, rendered in order
+const sections: {
+  role: ContributorRole;
+  labelKey: string;
+  icon: typeof Users;
+  iconColor: string;
+  iconBg: string;
+}[] = [
+  { role: "maintainer", labelKey: "maintainers", icon: Code, iconColor: "text-aurora-purple", iconBg: "bg-aurora-purple/15" },
+  { role: "artist", labelKey: "artists", icon: Sparkles, iconColor: "text-pink-400", iconBg: "bg-pink-400/15" },
+  { role: "contributor", labelKey: "contributors", icon: Users, iconColor: "text-aurora-blue", iconBg: "bg-aurora-blue/15" },
+  { role: "emeritus", labelKey: "emeritus", icon: Award, iconColor: "text-amber-500", iconBg: "bg-amber-500/15" },
+  { role: "special-guest", labelKey: "special-guests", icon: Star, iconColor: "text-emerald-500", iconBg: "bg-emerald-500/15" },
+  { role: "ublue", labelKey: "ublue", icon: Boxes, iconColor: "text-blue-400", iconBg: "bg-blue-400/15" },
+  { role: "designer", labelKey: "designers", icon: Palette, iconColor: "text-aurora-orangina", iconBg: "bg-aurora-orangina/15" },
+  { role: "translator", labelKey: "translators", icon: Languages, iconColor: "text-aurora-lightorange", iconBg: "bg-aurora-lightorange/15" },
+];
+
+const featuredUsernames = new Set(
+  contributorsData.contributors.map((c) => c.github.toLowerCase()),
+);
+const otherContributors = repoContributors.filter(
+  (c) =>
+    !featuredUsernames.has(c.login.toLowerCase()) &&
+    !c.login.includes("[bot]") &&
+    !c.login.startsWith("ubot-"),
+);
+const humanContributors = repoContributors.filter(
+  (c) => !c.login.includes("[bot]") && !c.login.startsWith("ubot-"),
+);
+const totalContributions = humanContributors.reduce(
+  (sum, c) => sum + c.contributions,
+  0,
+);
+
+function SectionHeader({
+  icon: Icon,
+  iconColor,
+  iconBg,
+  title,
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  iconColor: string;
+  iconBg: string;
+  title: string;
+}) {
+  return (
+    <div className="mb-8 flex items-center gap-4">
+      <div
+        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${iconBg}`}
+      >
+        <Icon className={`h-6 w-6 ${iconColor}`} />
+      </div>
+      <h2 className="text-3xl font-bold text-white">{title}</h2>
+      <div className="h-px flex-1 bg-linear-to-r from-zinc-700 to-transparent" />
+    </div>
+  );
+}
 
 export default function ContributorsPage() {
   const t = useTranslations("Contributors-Page");
-  const locale = useLocale();
+  const [repoFilter, setRepoFilter] = useState<string | null>(null);
 
-  // Group contributors by role
-  const maintainers = contributorsData.contributors.filter(
-    (c) => c.role === "maintainer",
-  );
-  const artists = contributorsData.contributors.filter(
-    (c) => c.role === "artist",
-  );
-  const emeritus = contributorsData.contributors.filter(
-    (c) => c.role === "emeritus",
-  );
-  const specialGuests = contributorsData.contributors.filter(
-    (c) => c.role === "special-guest",
-  );
-  const advisors = contributorsData.contributors.filter(
-    (c) => c.role === "advisor",
-  );
-  const ublue = contributorsData.contributors.filter((c) => c.role === "ublue");
-  const contributors = contributorsData.contributors.filter(
-    (c) => c.role === "contributor",
-  );
-  const designers = contributorsData.contributors.filter(
-    (c) => c.role === "designer",
-  );
-  const translators = contributorsData.contributors.filter(
-    (c) => c.role === "translator",
-  );
+  const byRole = (role: ContributorRole) =>
+    contributorsData.contributors.filter((c) => c.role === role);
+  const advisors = byRole("advisor");
 
-  // Filter repo contributors to exclude featured ones and bots
-  const featuredUsernames = new Set(
-    contributorsData.contributors.map((c) => c.github.toLowerCase()),
-  );
-  const otherContributors = repoContributors.filter(
-    (c) =>
-      !featuredUsernames.has(c.login.toLowerCase()) &&
-      !c.login.includes("[bot]"),
-  );
+  const visibleOthers = repoFilter
+    ? otherContributors.filter((c) => c.repos?.includes(repoFilter))
+    : otherContributors;
 
   return (
     <div className="relative min-h-screen bg-gray-950 text-white">
@@ -117,12 +142,43 @@ export default function ContributorsPage() {
       <main className="relative z-10 mx-auto max-w-(--breakpoint-xl) px-6 pb-16 pt-32">
         {/* Hero Section */}
         <div className="mb-16 text-center">
-          <h1 className="mb-4 bg-linear-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-5xl font-bold text-transparent lg:text-7xl">
+          <h1 className="mb-4 bg-linear-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text pb-2 text-5xl font-bold text-transparent lg:text-7xl">
             {t("title")}
           </h1>
           <p className="mx-auto max-w-2xl text-xl text-zinc-400">
             {t("subtitle")}
           </p>
+
+          {/* Stats */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            {[
+              [
+                humanContributors.length,
+                t("stats-contributors"),
+                "border-aurora-blue/40 bg-aurora-blue/10 text-aurora-blue",
+              ],
+              [
+                repos.length,
+                t("stats-repos"),
+                "border-purple-400/40 bg-purple-400/10 text-purple-400",
+              ],
+              [
+                totalContributions.toLocaleString(),
+                t("stats-contributions"),
+                "border-aurora-lightorange/40 bg-aurora-lightorange/10 text-aurora-lightorange",
+              ],
+            ].map(([value, label, color]) => (
+              <div
+                key={label}
+                className={`rounded-2xl border px-8 py-4 backdrop-blur-xs ${color}`}
+              >
+                <div className="text-3xl font-bold">
+                  {value}
+                </div>
+                <div className="mt-1 text-sm text-zinc-400">{label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Sponsor CTA */}
@@ -140,145 +196,42 @@ export default function ContributorsPage() {
           </div>
         </div>
 
-        {/* Maintainers Section */}
-        {maintainers.length > 0 && (
-          <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <Code className="h-6 w-6 text-aurora-purple" />
-              <h2 className="text-3xl font-bold text-white">
-                {t("maintainers")}
-              </h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {maintainers.map((contributor) => (
-                <ContributorCard
-                  key={contributor.github}
-                  contributor={contributor as ContributorData}
-                  githubData={getGitHubData(contributor.github)}
-                  roleLabels={contributorsData.roles}
-                  variant="detailed"
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Artists Section */}
-        {artists.length > 0 && (
-          <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <Sparkles className="h-6 w-6 text-pink-400" />
-              <h2 className="text-3xl font-bold text-white">{t("artists")}</h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {artists.map((contributor) => (
-                <ContributorCard
-                  key={contributor.github}
-                  contributor={contributor as ContributorData}
-                  githubData={getGitHubData(contributor.github)}
-                  roleLabels={contributorsData.roles}
-                  variant="detailed"
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Contributors Section */}
-        {contributors.length > 0 && (
-          <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <Users className="h-6 w-6 text-aurora-blue" />
-              <h2 className="text-3xl font-bold text-white">
-                {t("contributors")}
-              </h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {contributors.map((contributor) => (
-                <ContributorCard
-                  key={contributor.github}
-                  contributor={contributor as ContributorData}
-                  githubData={getGitHubData(contributor.github)}
-                  roleLabels={contributorsData.roles}
-                  variant="detailed"
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Emeritus Section */}
-        {emeritus.length > 0 && (
-          <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <Award className="h-6 w-6 text-amber-500" />
-              <h2 className="text-3xl font-bold text-white">{t("emeritus")}</h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {emeritus.map((contributor) => (
-                <ContributorCard
-                  key={contributor.github}
-                  contributor={contributor as ContributorData}
-                  githubData={getGitHubData(contributor.github)}
-                  roleLabels={contributorsData.roles}
-                  variant="detailed"
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Special Guests Section */}
-        {specialGuests.length > 0 && (
-          <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <Star className="h-6 w-6 text-emerald-500" />
-              <h2 className="text-3xl font-bold text-white">
-                {t("special-guests")}
-              </h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {specialGuests.map((contributor) => (
-                <ContributorCard
-                  key={contributor.github}
-                  contributor={contributor as ContributorData}
-                  githubData={getGitHubData(contributor.github)}
-                  roleLabels={contributorsData.roles}
-                  variant="detailed"
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Universal Blue Section */}
-        {ublue.length > 0 && (
-          <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <Boxes className="h-6 w-6 text-blue-400" />
-              <h2 className="text-3xl font-bold text-white">{t("ublue")}</h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {ublue.map((contributor) => (
-                <ContributorCard
-                  key={contributor.github}
-                  contributor={contributor as ContributorData}
-                  githubData={getGitHubData(contributor.github)}
-                  roleLabels={contributorsData.roles}
-                  variant="detailed"
-                />
-              ))}
-            </div>
-          </section>
-        )}
+        {/* Featured role sections */}
+        {sections.map(({ role, labelKey, icon, iconColor, iconBg }) => {
+          const members = byRole(role);
+          if (members.length === 0) return null;
+          return (
+            <section key={role} className="mb-16">
+              <SectionHeader
+                icon={icon}
+                iconColor={iconColor}
+                iconBg={iconBg}
+                title={t(labelKey)}
+              />
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {members.map((contributor) => (
+                  <ContributorCard
+                    key={contributor.github}
+                    contributor={contributor as ContributorData}
+                    githubData={getGitHubData(contributor.github)}
+                    roleLabels={contributorsData.roles}
+                    variant="detailed"
+                  />
+                ))}
+              </div>
+            </section>
+          );
+        })}
 
         {/* Advisors Section */}
         {advisors.length > 0 && (
           <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <GraduationCap className="h-6 w-6 text-slate-400" />
-              <h2 className="text-3xl font-bold text-white">{t("advisors")}</h2>
-            </div>
+            <SectionHeader
+              icon={GraduationCap}
+              iconColor="text-slate-400"
+              iconBg="bg-slate-400/15"
+              title={t("advisors")}
+            />
             <div className="flex flex-wrap justify-center gap-4">
               {advisors.map((contributor) => {
                 const ghData = getGitHubData(contributor.github);
@@ -296,66 +249,60 @@ export default function ContributorsPage() {
           </section>
         )}
 
-        {/* Designers Section */}
-        {designers.length > 0 && (
-          <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <Palette className="h-6 w-6 text-aurora-orangina" />
-              <h2 className="text-3xl font-bold text-white">
-                {t("designers")}
-              </h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {designers.map((contributor) => (
-                <ContributorCard
-                  key={contributor.github}
-                  contributor={contributor as ContributorData}
-                  githubData={getGitHubData(contributor.github)}
-                  roleLabels={contributorsData.roles}
-                  variant="detailed"
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Translators Section */}
-        {translators.length > 0 && (
-          <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <Languages className="h-6 w-6 text-aurora-lightorange" />
-              <h2 className="text-3xl font-bold text-white">
-                {t("translators")}
-              </h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {translators.map((contributor) => (
-                <ContributorCard
-                  key={contributor.github}
-                  contributor={contributor as ContributorData}
-                  githubData={getGitHubData(contributor.github)}
-                  roleLabels={contributorsData.roles}
-                  variant="detailed"
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
         {/* All Repository Contributors */}
         {otherContributors.length > 0 && (
           <section className="mb-16">
-            <div className="mb-8 flex items-center gap-3">
-              <GithubIcon color="#a1a1aa" size={24} />
-              <h2 className="text-3xl font-bold text-white">
-                {t("all-contributors")}
-              </h2>
-            </div>
+            <SectionHeader
+              icon={() => <GithubIcon color="#a1a1aa" size={24} />}
+              iconColor=""
+              iconBg="bg-zinc-400/15"
+              title={t("all-contributors")}
+            />
             <p className="mb-8 text-zinc-400">
               {t("all-contributors-subtitle")}
             </p>
+
+            {/* Repository filter */}
+            {repos.length > 1 && (
+              <div className="mb-8 flex flex-wrap justify-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setRepoFilter(null)}
+                  className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${
+                    repoFilter === null
+                      ? "border-aurora-blue bg-aurora-blue/20 text-white"
+                      : "border-zinc-700 bg-zinc-900/50 text-zinc-400 hover:border-zinc-500 hover:text-white"
+                  }`}
+                >
+                  {t("all-repos")}
+                </button>
+                {repos.map((repo) => (
+                  <button
+                    key={repo.name}
+                    type="button"
+                    onClick={() => setRepoFilter(repo.name)}
+                    className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${
+                      repoFilter === repo.name
+                        ? "border-aurora-blue bg-aurora-blue/20 text-white"
+                        : "border-zinc-700 bg-zinc-900/50 text-zinc-400 hover:border-zinc-500 hover:text-white"
+                    }`}
+                  >
+                    {repo.name.split("/")[1]}
+                    <span className="ml-2 text-xs text-zinc-500">
+                      {repo.contributorCount}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {visibleOthers.length === 0 && (
+              <p className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 text-center text-zinc-400">
+                {t("no-other-contributors")}
+              </p>
+            )}
             <div className="flex flex-wrap justify-center gap-4">
-              {otherContributors.map((contributor) => (
+              {visibleOthers.map((contributor) => (
                 <ContributorBadge
                   key={contributor.id}
                   img={contributor.avatar_url}
@@ -394,7 +341,6 @@ export default function ContributorsPage() {
           </div>
         </section>
       </main>
-
     </div>
   );
 }

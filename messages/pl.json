@@ -266,7 +266,7 @@
 		"designers": "Projektanci",
 		"translators": "Tłumacze",
 		"all-contributors": "Wszyscy współtwórcy repozytorium",
-		"all-contributors-subtitle": "Każdy, kto dołożył cegiełkę kodu do Aurory.",
+		"all-contributors-subtitle": "Każdy, kto dołożył cegiełkę kodu do repozytoriów Aurory.",
 		"loading": "Ładowanie listy...",
 		"join-title": "Chcesz pomóc?",
 		"join-subtitle": "Czekamy na każdą pomoc – kod, dokumentację, tłumaczenia i nie tylko!",
@@ -283,7 +283,12 @@
 			"contributor": "Współtwórca",
 			"designer": "Designer",
 			"translator": "Tłumacz"
-		}
+		},
+		"all-repos": "Wszystkie repozytoria",
+		"stats-contributors": "Współtwórcy",
+		"stats-repos": "Repozytoria",
+		"stats-contributions": "Kontrybucje",
+		"no-other-contributors": "Wszyscy współtwórcy tego repozytorium są już wyróżnieni powyżej."
 	},
 	"Art-Page": {
 		"title": "Galeria sztuki Aurory",

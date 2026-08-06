@@ -1,4 +1,11 @@
 {
+  "repositories": [
+    "ublue-os/aurora",
+    "get-aurora-dev/aurora-web",
+    "get-aurora-dev/common",
+    "get-aurora-dev/branding",
+    "get-aurora-dev/iso"
+  ],
   "contributors": [
     {
       "github": "inffy",
