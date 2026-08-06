@@ -89,8 +89,6 @@ export default function DownloadAurora({
                   {/* Download Buttons */}
                   <DownloadButtons imageName={imageName} />
 
-
-
                   {/* Extra Info */}
                   <div className="grid gap-3 sm:grid-cols-2">
                     <InfoPanel title={t("developer-mode")}>
