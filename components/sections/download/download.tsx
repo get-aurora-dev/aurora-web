@@ -70,8 +70,6 @@ export default function DownloadAurora({
 
               {primaryGPU ? (
                 <div className="space-y-4">
-                  
-{/* Installation note */}
                   <div className="flex items-start gap-3 rounded-xl border border-aurora-blue/20 bg-aurora-blue/5 px-4 py-3">
                     <Info className="mt-0.5 h-4 w-4 shrink-0 text-aurora-blue" />
                     <p className="text-sm text-zinc-300">
@@ -84,15 +82,12 @@ export default function DownloadAurora({
                         <ArrowUpRight className="h-3.5 w-3.5" />
                       </a>{" "}
                       {t("create-usb")}{" "}
-                      <span className="text-zinc-500">
-                        {t("note")} {t("ventoy-not-supported")}
-                      </span>
                     </p>
                   </div>
                   {/* Download Buttons */}
                   <DownloadButtons imageName={imageName} />
 
-                  
+
 
                   {/* Extra Info */}
                   <div className="grid gap-3 sm:grid-cols-2">
@@ -148,11 +143,10 @@ function StepLabel({
   return (
     <div className={`flex items-center gap-3 ${muted ? "opacity-40" : ""}`}>
       <span
-        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors ${
-          done
+        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors ${done
             ? "bg-aurora-blue text-zinc-950"
             : "border border-zinc-600 text-zinc-400"
-        }`}
+          }`}
       >
         {done ? <CheckCircle2 className="h-4 w-4" /> : number}
       </span>
@@ -173,16 +167,14 @@ function GPUCard({
   return (
     <button
       onClick={onClick}
-      className={`group relative flex w-full items-center gap-4 rounded-2xl border p-5 text-left transition-all duration-200 ${
-        selected
+      className={`group relative flex w-full items-center gap-4 rounded-2xl border p-5 text-left transition-all duration-200 ${selected
           ? "border-aurora-blue/60 bg-aurora-blue/10 shadow-lg shadow-aurora-blue/10"
           : "border-zinc-700/50 bg-zinc-900/30 hover:border-zinc-600 hover:bg-zinc-900/50"
-      }`}
+        }`}
     >
       <span
-        className={`h-3 w-3 shrink-0 rounded-full transition-colors ${
-          selected ? "bg-aurora-blue" : "bg-zinc-600 group-hover:bg-zinc-400"
-        }`}
+        className={`h-3 w-3 shrink-0 rounded-full transition-colors ${selected ? "bg-aurora-blue" : "bg-zinc-600 group-hover:bg-zinc-400"
+          }`}
       />
       <div>
         <p className="font-semibold text-white">{title}</p>
