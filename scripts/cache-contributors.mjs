@@ -71,7 +71,7 @@ async function fetchGitHubUser(username) {
   }
 }
 
-async function fetchRepoContributors() {
+async function fetchRepoContributors(repo) {
   try {
     // Fetch all pages of contributors
     const allContributors = [];
@@ -80,7 +80,7 @@ async function fetchRepoContributors() {
 
     while (true) {
       const data = await fetchWithRetry(
-        `https://api.github.com/repos/ublue-os/aurora/contributors?per_page=${perPage}&page=${page}`
+        `https://api.github.com/repos/${repo}/contributors?per_page=${perPage}&page=${page}`
       );
       if (!data || data.length === 0) break;
       allContributors.push(...data);
@@ -96,9 +96,34 @@ async function fetchRepoContributors() {
       contributions: c.contributions,
     }));
   } catch (error) {
-    console.warn("Failed to fetch repo contributors:", error.message);
+    console.warn(`Failed to fetch contributors for ${repo}:`, error.message);
     return [];
   }
+}
+
+async function fetchAllRepoContributors(repositories) {
+  const byLogin = new Map();
+  const repos = [];
+
+  for (const repo of repositories) {
+    const list = await fetchRepoContributors(repo);
+    console.log(`  ${repo}: ${list.length} contributors`);
+    repos.push({ name: repo, contributorCount: list.length });
+    for (const c of list) {
+      const existing = byLogin.get(c.login);
+      if (existing) {
+        existing.contributions += c.contributions;
+        existing.repos.push(repo);
+      } else {
+        byLogin.set(c.login, { ...c, repos: [repo] });
+      }
+    }
+  }
+
+  const merged = [...byLogin.values()].sort(
+    (a, b) => b.contributions - a.contributions
+  );
+  return { repos, repoContributors: merged };
 }
 
 async function loadExistingCache() {
@@ -172,10 +197,11 @@ async function main() {
     }
   }
 
-  // Fetch repo contributors
-  console.log("Fetching repository contributors...");
-  let repoContributors = await fetchRepoContributors();
-  console.log(`  Found ${repoContributors.length} repo contributors`);
+  // Fetch contributors across all configured repositories
+  const repositories = contributorsData.repositories || ["ublue-os/aurora"];
+  console.log(`Fetching contributors for ${repositories.length} repositories...`);
+  let { repos, repoContributors } = await fetchAllRepoContributors(repositories);
+  console.log(`  Found ${repoContributors.length} unique repo contributors`);
 
   // Use existing cache as fallback for missing data
   if (existingCache) {
@@ -191,6 +217,7 @@ async function main() {
     if (repoContributors.length === 0 && existingCache.repoContributors?.length > 0) {
       console.log("  Using cached repo contributors (API unavailable)");
       repoContributors = existingCache.repoContributors;
+      repos = existingCache.repos || [];
     }
   }
 
@@ -198,6 +225,7 @@ async function main() {
   const cache = {
     generatedAt: new Date().toISOString(),
     githubUsers,
+    repos,
     repoContributors,
   };
 
