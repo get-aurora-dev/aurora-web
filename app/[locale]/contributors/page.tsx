@@ -71,15 +71,15 @@ const sections: {
   iconColor: string;
   iconBg: string;
 }[] = [
-  { role: "maintainer", labelKey: "maintainers", icon: Code, iconColor: "text-aurora-purple", iconBg: "bg-aurora-purple/15" },
-  { role: "artist", labelKey: "artists", icon: Sparkles, iconColor: "text-pink-400", iconBg: "bg-pink-400/15" },
-  { role: "contributor", labelKey: "contributors", icon: Users, iconColor: "text-aurora-blue", iconBg: "bg-aurora-blue/15" },
-  { role: "emeritus", labelKey: "emeritus", icon: Award, iconColor: "text-amber-500", iconBg: "bg-amber-500/15" },
-  { role: "special-guest", labelKey: "special-guests", icon: Star, iconColor: "text-emerald-500", iconBg: "bg-emerald-500/15" },
-  { role: "ublue", labelKey: "ublue", icon: Boxes, iconColor: "text-blue-400", iconBg: "bg-blue-400/15" },
-  { role: "designer", labelKey: "designers", icon: Palette, iconColor: "text-aurora-orangina", iconBg: "bg-aurora-orangina/15" },
-  { role: "translator", labelKey: "translators", icon: Languages, iconColor: "text-aurora-lightorange", iconBg: "bg-aurora-lightorange/15" },
-];
+    { role: "maintainer", labelKey: "maintainers", icon: Code, iconColor: "text-aurora-purple", iconBg: "bg-aurora-purple/15" },
+    { role: "artist", labelKey: "artists", icon: Sparkles, iconColor: "text-pink-400", iconBg: "bg-pink-400/15" },
+    { role: "contributor", labelKey: "contributors", icon: Users, iconColor: "text-aurora-blue", iconBg: "bg-aurora-blue/15" },
+    { role: "emeritus", labelKey: "emeritus", icon: Award, iconColor: "text-amber-500", iconBg: "bg-amber-500/15" },
+    { role: "special-guest", labelKey: "special-guests", icon: Star, iconColor: "text-emerald-500", iconBg: "bg-emerald-500/15" },
+    { role: "ublue", labelKey: "ublue", icon: Boxes, iconColor: "text-blue-400", iconBg: "bg-blue-400/15" },
+    { role: "designer", labelKey: "designers", icon: Palette, iconColor: "text-aurora-orangina", iconBg: "bg-aurora-orangina/15" },
+    { role: "translator", labelKey: "translators", icon: Languages, iconColor: "text-aurora-lightorange", iconBg: "bg-aurora-lightorange/15" },
+  ];
 
 const featuredUsernames = new Set(
   contributorsData.contributors.map((c) => c.github.toLowerCase()),
@@ -126,6 +126,7 @@ export default function ContributorsPage() {
   const t = useTranslations("Contributors-Page");
   const [repoFilter, setRepoFilter] = useState<string | null>(null);
 
+  
   const byRole = (role: ContributorRole) =>
     contributorsData.contributors.filter((c) => c.role === role);
   const advisors = byRole("advisor");
@@ -267,12 +268,10 @@ export default function ContributorsPage() {
               <div className="mb-8 flex flex-wrap justify-center gap-2">
                 <button
                   type="button"
-                  onClick={() => setRepoFilter(null)}
-                  className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${
-                    repoFilter === null
+                  onClick={() => { setRepoFilter(null); }} className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${repoFilter === null
                       ? "border-aurora-blue bg-aurora-blue/20 text-white"
                       : "border-zinc-700 bg-zinc-900/50 text-zinc-400 hover:border-zinc-500 hover:text-white"
-                  }`}
+                    }`}
                 >
                   {t("all-repos")}
                 </button>
@@ -280,12 +279,10 @@ export default function ContributorsPage() {
                   <button
                     key={repo.name}
                     type="button"
-                    onClick={() => setRepoFilter(repo.name)}
-                    className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${
-                      repoFilter === repo.name
+                    onClick={() => { setRepoFilter(repo.name); }} className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${repoFilter === repo.name
                         ? "border-aurora-blue bg-aurora-blue/20 text-white"
                         : "border-zinc-700 bg-zinc-900/50 text-zinc-400 hover:border-zinc-500 hover:text-white"
-                    }`}
+                      }`}
                   >
                     {repo.name.split("/")[1]}
                     <span className="ml-2 text-xs text-zinc-500">
