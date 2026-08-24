@@ -33,7 +33,7 @@
     "@types/react-dom": "19.2.3",
     "eslint": "10.8.1",
     "eslint-config-next": "16.2.12",
-    "postcss": "8.5.25",
+    "postcss": "8.5.26",
     "prettier": "3.9.6",
     "prettier-plugin-tailwindcss": "0.8.1",
     "tailwindcss": "4.3.3",
