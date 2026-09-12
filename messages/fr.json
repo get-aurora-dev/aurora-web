@@ -30,6 +30,7 @@
 		"intel-amd": "Intel / AMD",
 		"intel-amd-subtitle": "Intel / AMD · Pilotes Mesa",
 		"nvidia": "Nvidia (Série RTX/GTX 16xx)",
+		"nvidia-subtitle": "RTX-Series / GTX 16xx - Pilotes Open-Nvidia",
 		"installation-guide": "Guide d'installation",
 		"recommend-using": "Nous recommandons d'utiliser",
 		"fedora-image-writer": "Fedora Media Writer",
