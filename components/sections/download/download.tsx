@@ -202,8 +202,8 @@ function InfoPanel({
 }
 
 function DownloadButtons({ imageName }: { imageName: string }) {
-  const downloadLink = `https://dl.getaurora.dev/${imageName}-webui-x86_64.iso`;
-  const checksumLink = `https://dl.getaurora.dev/${imageName}-webui-x86_64.iso-CHECKSUM`;
+  const downloadLink = `https://dl.getaurora.dev/${imageName}-x86_64.iso`;
+  const checksumLink = `https://dl.getaurora.dev/${imageName}-x86_64.iso-CHECKSUM`;
   const t = useTranslations("Download-Component");
 
   return (
