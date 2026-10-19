@@ -1,0 +1,43 @@
+name: Deploy PR Preview to Aurora Web Previews Project
+on:
+  workflow_run:
+    workflows: ["Build PR Preview"]
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  deploy:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: preview
+          path: preview
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # pr.txt comes from untrusted code; only accept a plain number
+      - name: Validate PR number
+        id: pr
+        run: |
+          PR=$(cat preview/pr.txt)
+          [[ "$PR" =~ ^[0-9]+$ ]] || { echo "Invalid PR number"; exit 1; }
+          echo "number=$PR" >> "$GITHUB_OUTPUT"
+
+      - uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy preview/site --project-name=aurora-web-previews --branch=pr-${{ steps.pr.outputs.number }}
+
+      - name: Comment preview link
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment ${{ steps.pr.outputs.number }} --repo ${{ github.repository }} \
+            --body "Preview: https://pr-${{ steps.pr.outputs.number }}.aurora-web-previews.pages.dev" \
+            --edit-last --create-if-none
