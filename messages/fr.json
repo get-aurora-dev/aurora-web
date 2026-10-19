@@ -49,7 +49,7 @@
 	},
 	"Introduction": {
 		"title": "Aurora,",
-		"stargazer": "Bienvenue astronome, Aurora vous attend.",
+		"stargazer": "Bienvenue <i>stargazer</i>, Aurora vous attend.",
 		"powered": "Propulsé par KDE et Universal Blue.",
 		"onboard": "Embarquez à la découverte de votre nouveau système d'exploitation de bureau.",
 		"gaze": "Observons les étoiles ensemble, cher voyageur.",
