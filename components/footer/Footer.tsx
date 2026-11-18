@@ -3,6 +3,8 @@
 import { CircleArrowUp, GitMerge, GlobeIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import GithubIcon from "../GithubIcon";
+import BlueskyIcon from "../icons/bluesky";
+import MastodonIcon from "../icons/mastodon";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -68,6 +70,23 @@ export default function Footer() {
           >
             <GitMerge />
             Website Source Code
+          </a>
+
+          <a
+            className={"flex flex-row justify-center items-center gap-1"}
+            href={"https://hachyderm.io/@getaurora"}
+            rel={"me noopener"}
+          >
+            <MastodonIcon />
+            Mastodon
+          </a>
+
+          <a
+            className={"flex flex-row justify-center items-center gap-1"}
+            href={"https://bsky.app/profile/getaurora.bsky.social"}
+          >
+            <BlueskyIcon />
+            Bluesky
           </a>
         </div>
         <div className={"mb-3 text-sm italic"}>{t("not-affiliated")}</div>
